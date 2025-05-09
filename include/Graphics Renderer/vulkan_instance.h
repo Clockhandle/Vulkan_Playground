@@ -1,0 +1,31 @@
+#ifndef VULKANINSTANCE_H
+#define VULKANINSTANCE_H
+
+#define GLFW_INCLUDE_VULKAN
+#include <GLFW/glfw3.h>
+#include <stdexcept>
+#include <vector>
+#include <cstring>
+#include "vulkan_debug_messenger.h"
+
+class VulkanInstance
+{
+public:
+    VulkanInstance(bool enableValidationLayers);
+    ~VulkanInstance();
+
+    VkInstance getHandle() const;
+private:
+    void createInstance();
+    std::vector<const char*> getRequiredExtensions();
+    bool checkValidationLayerSupport();
+private:
+    VkInstance m_instance;
+    bool m_enableValidationLayers;
+    const std::vector<const char*> m_validationLayersList = 
+    {
+        "VK_LAYER_KHRONOS_validation"
+    };
+};
+
+#endif // VULKANINSTANCE_H

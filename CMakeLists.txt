@@ -1,31 +1,29 @@
 cmake_minimum_required(VERSION 3.10)
-project(HelloTriangle)
+project(VulkanPlayground)
 
 # Set the C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Define compiler flags
-set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
-set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g -DDEBUG")
 
+include_directories(${CMAKE_SOURCE_DIR}/include)
 # Find Vulkan and GLFW
 find_package(Vulkan REQUIRED)
 find_package(glfw3 REQUIRED)
 
 # Set the source files
-set(SOURCES main.cpp)
+file(GLOB_RECURSE SOURCES "${CMAKE_SOURCE_DIR}/src/*.cpp")
 
 # Define the executable
-add_executable(HelloTriangle ${SOURCES})
+add_executable(${PROJECT_NAME} ${SOURCES})
 
 # Link libraries
-target_link_libraries(HelloTriangle PRIVATE glfw Vulkan::Vulkan dl pthread X11 Xxf86vm Xrandr Xi)
+target_link_libraries(${PROJECT_NAME} PRIVATE glfw Vulkan::Vulkan dl pthread X11 Xxf86vm Xrandr Xi)
 
-# Enable debugging and release flags
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    target_compile_definitions(HelloTriangle PRIVATE DEBUG)
-endif()
+target_compile_definitions(${PROJECT_NAME} PRIVATE 
+    $<$<CONFIG:DEBUG>:DEBUG>
+    $<$<CONFIG:RELEASE>:NDEBUG>
+)
 
 # Define custom build commands
 add_custom_target(run
