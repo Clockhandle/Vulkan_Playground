@@ -1,5 +1,6 @@
 #include "Graphics Renderer/vulkan_device.h"
 #include "Graphics Renderer/vulkan_physical_device.h"
+#include "Graphics Renderer/vulkan_config.h"
 #include <set>
 #include <vector>
 VulkanDevice::VulkanDevice(const VulkanPhysicalDevice& physicalDevice)
@@ -66,7 +67,8 @@ void VulkanDevice::createLogicalDevice(const VulkanPhysicalDevice &physicalDevic
 
     createInfo.pEnabledFeatures = &deviceFeatures;
 
-    createInfo.enabledExtensionCount = 0;
+    createInfo.enabledExtensionCount = static_cast<uint32_t>(g_requiredDeviceExtensions.size());
+    createInfo.ppEnabledExtensionNames = g_requiredDeviceExtensions.data();
 
     createInfo.enabledLayerCount = 0;
     createInfo.ppEnabledLayerNames = nullptr;

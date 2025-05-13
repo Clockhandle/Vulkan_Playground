@@ -1,5 +1,11 @@
 #include "Graphics Renderer/vulkan_instance.h"
 #include "Graphics Renderer/vulkan_debug_messenger.h"
+
+const std::vector<const char*> VulkanInstance::s_validationLayersList = 
+{
+    "VK_LAYER_KHRONOS_validation"
+};
+
 VulkanInstance::VulkanInstance(bool enableValidationLayers) 
     :
     m_instance(VK_NULL_HANDLE),
@@ -42,8 +48,8 @@ void VulkanInstance::createInstance()
     bool actuallyEnableValidationLayers = m_enableValidationLayers && checkValidationLayerSupport();
     if(actuallyEnableValidationLayers)
     {
-        createInfo.enabledLayerCount = static_cast<uint32_t>(m_validationLayersList.size());
-        createInfo.ppEnabledLayerNames = m_validationLayersList.data();
+        createInfo.enabledLayerCount = static_cast<uint32_t>(s_validationLayersList.size());
+        createInfo.ppEnabledLayerNames = s_validationLayersList.data();
 
         VulkanDebugMessenger::populateDebugMessengerCreateInfo(debugCreateInfo);
         createInfo.pNext = (VkDebugUtilsMessengerCreateInfoEXT*) &debugCreateInfo;
@@ -83,7 +89,7 @@ bool VulkanInstance::checkValidationLayerSupport()
     std::vector<VkLayerProperties> availableLayers(layerCount);
     vkEnumerateInstanceLayerProperties(&layerCount, availableLayers.data());
 
-    for(const char* layerName : m_validationLayersList)
+    for(const char* layerName : s_validationLayersList)
     {
         bool layerFound = false;
 

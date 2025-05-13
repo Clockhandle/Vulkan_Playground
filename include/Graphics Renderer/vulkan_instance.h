@@ -21,10 +21,7 @@ private:
 private:
     VkInstance m_instance;
     bool m_enableValidationLayers;
-    const std::vector<const char*> m_validationLayersList = 
-    {
-        "VK_LAYER_KHRONOS_validation"
-    };
+    static const std::vector<const char*> s_validationLayersList;
 };
 
 #endif // VULKANINSTANCE_H

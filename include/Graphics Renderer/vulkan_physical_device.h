@@ -10,10 +10,17 @@
 #include <vulkan/vulkan.h>
 #include "vulkan_surface.h"
 
+struct SwapchainSupportDetails
+{
+    VkSurfaceCapabilitiesKHR capabilities;
+    std::vector<VkSurfaceFormatKHR> formats;
+    std::vector<VkPresentModeKHR> presentModes;   
+};
+
 class VulkanPhysicalDevice
 {
 public:
-    VulkanPhysicalDevice(VkInstance instance, const VkSurfaceKHR& surface);
+    VulkanPhysicalDevice(VkInstance instance, VkSurfaceKHR surface);
     ~VulkanPhysicalDevice();
 
     struct QueueFamilyIndices
@@ -30,11 +37,12 @@ public:
     VkPhysicalDevice getHandle() const;
     const QueueFamilyIndices& getQueueFamilyIndices() const;
     const VkPhysicalDeviceProperties& getDeviceProperties() const;
-
+    static SwapchainSupportDetails querySwapChainSupport(VkPhysicalDevice device, VkSurfaceKHR surface);
+    
 private:
-    void pickPhysicalDevice(const VkSurfaceKHR& surface); 
-    bool isDeviceSuitable(VkPhysicalDevice device, const VkSurfaceKHR& surface);
-    QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device, const VkSurfaceKHR& surface);
+    void pickPhysicalDevice(VkSurfaceKHR surface); 
+    bool isDeviceSuitable(VkPhysicalDevice device, VkSurfaceKHR surface);
+    QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device, VkSurfaceKHR surface);
     bool checkDeviceExtensionSupport(VkPhysicalDevice device); 
 
 private:

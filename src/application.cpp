@@ -45,6 +45,7 @@ void Application::initVulkan()
     m_vulkanSurface = std::make_unique<VulkanSurface>(m_vulkanInstance->getHandle(), m_window->getWindow());
     m_vulkanPhysicalDevice = std::make_unique<VulkanPhysicalDevice>(m_vulkanInstance->getHandle(), m_vulkanSurface->getHandle());
     m_vulkanDevice = std::make_unique<VulkanDevice>(*m_vulkanPhysicalDevice);
+    m_vulkanSwapChain = std::make_unique<VulkanSwapChain>(m_vulkanDevice->getHandle(), *m_vulkanPhysicalDevice, m_vulkanSurface->getHandle(), m_window->getWindow());
 }
 
 void Application::run()
@@ -73,6 +74,7 @@ void Application::mainLoop()
 void Application::cleanup()
 {
     //Order matters!!!
+    m_vulkanSwapChain.reset();
     m_vulkanDevice.reset();
     m_vulkanSurface.reset();
     m_vulkanDebugMessenger.reset();

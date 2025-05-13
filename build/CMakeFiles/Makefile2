@@ -83,12 +83,12 @@ clean: CMakeFiles/clean_build.dir/clean
 CMakeFiles/VulkanPlayground.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target VulkanPlayground"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target VulkanPlayground"
 .PHONY : CMakeFiles/VulkanPlayground.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/VulkanPlayground.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/clockhandle/Vulkan_Playground/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/clockhandle/Vulkan_Playground/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/VulkanPlayground.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/clockhandle/Vulkan_Playground/build/CMakeFiles 0
 .PHONY : CMakeFiles/VulkanPlayground.dir/rule

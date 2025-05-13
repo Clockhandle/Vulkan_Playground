@@ -275,6 +275,30 @@ src/Graphics_Renderer/vulkan_surface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_surface.cpp.s
 .PHONY : src/Graphics_Renderer/vulkan_surface.cpp.s
 
+src/Graphics_Renderer/vulkan_swap_chain.o: src/Graphics_Renderer/vulkan_swap_chain.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_swap_chain.o
+
+# target to build an object file
+src/Graphics_Renderer/vulkan_swap_chain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_swap_chain.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_swap_chain.cpp.o
+
+src/Graphics_Renderer/vulkan_swap_chain.i: src/Graphics_Renderer/vulkan_swap_chain.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_swap_chain.i
+
+# target to preprocess a source file
+src/Graphics_Renderer/vulkan_swap_chain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_swap_chain.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_swap_chain.cpp.i
+
+src/Graphics_Renderer/vulkan_swap_chain.s: src/Graphics_Renderer/vulkan_swap_chain.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_swap_chain.s
+
+# target to generate assembly for a file
+src/Graphics_Renderer/vulkan_swap_chain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_swap_chain.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_swap_chain.cpp.s
+
 src/application.o: src/application.cpp.o
 .PHONY : src/application.o
 
@@ -373,6 +397,9 @@ help:
 	@echo "... src/Graphics_Renderer/vulkan_surface.o"
 	@echo "... src/Graphics_Renderer/vulkan_surface.i"
 	@echo "... src/Graphics_Renderer/vulkan_surface.s"
+	@echo "... src/Graphics_Renderer/vulkan_swap_chain.o"
+	@echo "... src/Graphics_Renderer/vulkan_swap_chain.i"
+	@echo "... src/Graphics_Renderer/vulkan_swap_chain.s"
 	@echo "... src/application.o"
 	@echo "... src/application.i"
 	@echo "... src/application.s"

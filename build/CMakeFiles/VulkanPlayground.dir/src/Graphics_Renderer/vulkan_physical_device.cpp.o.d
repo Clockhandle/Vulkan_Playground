@@ -179,8 +179,9 @@ CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_physical_device.cpp
  /usr/include/vk_video/vulkan_video_codec_av1std_encode.h \
  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_surface.h \
  /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
- /usr/include/KHR/khrplatform.h /usr/include/c++/13/set \
- /usr/include/c++/13/bits/stl_tree.h \
+ /usr/include/KHR/khrplatform.h \
+ /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_config.h \
+ /usr/include/c++/13/set /usr/include/c++/13/bits/stl_tree.h \
  /usr/include/c++/13/ext/aligned_buffer.h \
  /usr/include/c++/13/bits/node_handle.h \
  /usr/include/c++/13/bits/stl_set.h \
