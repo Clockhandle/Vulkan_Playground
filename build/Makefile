@@ -179,6 +179,30 @@ src/Graphics_Renderer/vulkan_debug_messenger.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_debug_messenger.cpp.s
 .PHONY : src/Graphics_Renderer/vulkan_debug_messenger.cpp.s
 
+src/Graphics_Renderer/vulkan_device.o: src/Graphics_Renderer/vulkan_device.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_device.o
+
+# target to build an object file
+src/Graphics_Renderer/vulkan_device.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_device.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_device.cpp.o
+
+src/Graphics_Renderer/vulkan_device.i: src/Graphics_Renderer/vulkan_device.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_device.i
+
+# target to preprocess a source file
+src/Graphics_Renderer/vulkan_device.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_device.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_device.cpp.i
+
+src/Graphics_Renderer/vulkan_device.s: src/Graphics_Renderer/vulkan_device.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_device.s
+
+# target to generate assembly for a file
+src/Graphics_Renderer/vulkan_device.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_device.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_device.cpp.s
+
 src/Graphics_Renderer/vulkan_instance.o: src/Graphics_Renderer/vulkan_instance.cpp.o
 .PHONY : src/Graphics_Renderer/vulkan_instance.o
 
@@ -202,6 +226,30 @@ src/Graphics_Renderer/vulkan_instance.s: src/Graphics_Renderer/vulkan_instance.c
 src/Graphics_Renderer/vulkan_instance.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_instance.cpp.s
 .PHONY : src/Graphics_Renderer/vulkan_instance.cpp.s
+
+src/Graphics_Renderer/vulkan_physical_device.o: src/Graphics_Renderer/vulkan_physical_device.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_physical_device.o
+
+# target to build an object file
+src/Graphics_Renderer/vulkan_physical_device.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_physical_device.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_physical_device.cpp.o
+
+src/Graphics_Renderer/vulkan_physical_device.i: src/Graphics_Renderer/vulkan_physical_device.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_physical_device.i
+
+# target to preprocess a source file
+src/Graphics_Renderer/vulkan_physical_device.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_physical_device.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_physical_device.cpp.i
+
+src/Graphics_Renderer/vulkan_physical_device.s: src/Graphics_Renderer/vulkan_physical_device.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_physical_device.s
+
+# target to generate assembly for a file
+src/Graphics_Renderer/vulkan_physical_device.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_physical_device.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_physical_device.cpp.s
 
 src/application.o: src/application.cpp.o
 .PHONY : src/application.o
@@ -289,9 +337,15 @@ help:
 	@echo "... src/Graphics_Renderer/vulkan_debug_messenger.o"
 	@echo "... src/Graphics_Renderer/vulkan_debug_messenger.i"
 	@echo "... src/Graphics_Renderer/vulkan_debug_messenger.s"
+	@echo "... src/Graphics_Renderer/vulkan_device.o"
+	@echo "... src/Graphics_Renderer/vulkan_device.i"
+	@echo "... src/Graphics_Renderer/vulkan_device.s"
 	@echo "... src/Graphics_Renderer/vulkan_instance.o"
 	@echo "... src/Graphics_Renderer/vulkan_instance.i"
 	@echo "... src/Graphics_Renderer/vulkan_instance.s"
+	@echo "... src/Graphics_Renderer/vulkan_physical_device.o"
+	@echo "... src/Graphics_Renderer/vulkan_physical_device.i"
+	@echo "... src/Graphics_Renderer/vulkan_physical_device.s"
 	@echo "... src/application.o"
 	@echo "... src/application.i"
 	@echo "... src/application.s"

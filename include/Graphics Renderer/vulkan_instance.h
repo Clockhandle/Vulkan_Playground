@@ -6,7 +6,6 @@
 #include <stdexcept>
 #include <vector>
 #include <cstring>
-#include "vulkan_debug_messenger.h"
 
 class VulkanInstance
 {

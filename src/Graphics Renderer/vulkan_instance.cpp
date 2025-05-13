@@ -1,5 +1,5 @@
 #include "Graphics Renderer/vulkan_instance.h"
-
+#include "Graphics Renderer/vulkan_debug_messenger.h"
 VulkanInstance::VulkanInstance(bool enableValidationLayers) 
     :
     m_instance(VK_NULL_HANDLE),

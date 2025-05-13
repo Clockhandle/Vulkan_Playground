@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/clockhandle/Vulkan_Playground/src/Graphics Renderer/vulkan_debug_messenger.cpp" "CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_debug_messenger.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_debug_messenger.cpp.o.d"
+  "/home/clockhandle/Vulkan_Playground/src/Graphics Renderer/vulkan_device.cpp" "CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_device.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_device.cpp.o.d"
   "/home/clockhandle/Vulkan_Playground/src/Graphics Renderer/vulkan_instance.cpp" "CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_instance.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_instance.cpp.o.d"
+  "/home/clockhandle/Vulkan_Playground/src/Graphics Renderer/vulkan_physical_device.cpp" "CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_physical_device.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_physical_device.cpp.o.d"
   "/home/clockhandle/Vulkan_Playground/src/application.cpp" "CMakeFiles/VulkanPlayground.dir/src/application.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/src/application.cpp.o.d"
   "/home/clockhandle/Vulkan_Playground/src/main.cpp" "CMakeFiles/VulkanPlayground.dir/src/main.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/src/main.cpp.o.d"
   "/home/clockhandle/Vulkan_Playground/src/window.cpp" "CMakeFiles/VulkanPlayground.dir/src/window.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/src/window.cpp.o.d"

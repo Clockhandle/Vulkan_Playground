@@ -1,8 +1,8 @@
-CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_instance.cpp.o: \
- /home/clockhandle/Vulkan_Playground/src/Graphics\ Renderer/vulkan_instance.cpp \
+CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_device.cpp.o: \
+ /home/clockhandle/Vulkan_Playground/src/Graphics\ Renderer/vulkan_device.cpp \
  /usr/include/stdc-predef.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_instance.h \
- /usr/include/GLFW/glfw3.h \
+ /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_device.h \
+ /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -20,7 +20,6 @@ CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_instance.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
- /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
  /usr/include/vulkan/vulkan_core.h \
  /usr/include/vk_video/vulkan_video_codec_h264std.h \
  /usr/include/vk_video/vulkan_video_codecs_common.h \
@@ -35,9 +34,8 @@ CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_instance.cpp.o: \
  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
  /usr/include/vk_video/vulkan_video_codec_av1std.h \
  /usr/include/vk_video/vulkan_video_codec_av1std_encode.h \
- /usr/include/GL/gl.h /usr/include/GL/glext.h \
- /usr/include/KHR/khrplatform.h /usr/include/c++/13/stdexcept \
- /usr/include/c++/13/exception \
+ /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_physical_device.h \
+ /usr/include/c++/13/stdexcept /usr/include/c++/13/exception \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
@@ -141,15 +139,15 @@ CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_instance.cpp.o: \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
- /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/optional \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/cstdint /usr/include/c++/13/vector \
+ /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/cstring \
- /usr/include/string.h /usr/include/strings.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_debug_messenger.h \
- /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
- /usr/include/c++/13/ios /usr/include/c++/13/bits/ios_base.h \
- /usr/include/c++/13/ext/atomicity.h \
+ /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/iostream \
+ /usr/include/c++/13/ostream /usr/include/c++/13/ios \
+ /usr/include/c++/13/bits/ios_base.h /usr/include/c++/13/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
  /usr/include/pthread.h /usr/include/sched.h \
