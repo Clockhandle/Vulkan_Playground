@@ -6,10 +6,13 @@
 const std::vector<const char*> g_requiredDeviceExtensions = {
 };
 
-VulkanPhysicalDevice::VulkanPhysicalDevice(VkInstance instance)
-    : m_instance(instance), m_physicalDevice(VK_NULL_HANDLE)
+VulkanPhysicalDevice::VulkanPhysicalDevice(VkInstance instance, const VkSurfaceKHR& surface)
+    : 
+    m_instance(instance),
+    m_surface(surface),
+    m_physicalDevice(VK_NULL_HANDLE)
 {
-    pickPhysicalDevice(); 
+    pickPhysicalDevice(m_surface); 
 
     if (m_physicalDevice != VK_NULL_HANDLE)
     {
@@ -41,7 +44,7 @@ const VkPhysicalDeviceProperties& VulkanPhysicalDevice::getDeviceProperties() co
 }
 
 
-void VulkanPhysicalDevice::pickPhysicalDevice()
+void VulkanPhysicalDevice::pickPhysicalDevice(const VkSurfaceKHR& surface)
 {
     uint32_t deviceCount = 0;
     vkEnumeratePhysicalDevices(m_instance, &deviceCount, nullptr);
@@ -68,7 +71,7 @@ void VulkanPhysicalDevice::pickPhysicalDevice()
         vkGetPhysicalDeviceProperties(device, &props);
         // std::cout << "  - " << props.deviceName; // Optional debug print
 
-        if (isDeviceSuitable(device))
+        if (isDeviceSuitable(device, surface))
         {
             // std::cout << " (Suitable)" << std::endl; // Optional debug print
             int currentScore = 0;
@@ -91,13 +94,13 @@ void VulkanPhysicalDevice::pickPhysicalDevice()
 
     if (bestDevice != VK_NULL_HANDLE) {
         m_physicalDevice = bestDevice;
-        m_queueFamilyIndices = findQueueFamilies(m_physicalDevice);
+        m_queueFamilyIndices = findQueueFamilies(m_physicalDevice, m_surface);
     }
 }
 
-bool VulkanPhysicalDevice::isDeviceSuitable(VkPhysicalDevice device)
+bool VulkanPhysicalDevice::isDeviceSuitable(VkPhysicalDevice device, const VkSurfaceKHR& surface)
 {
-    QueueFamilyIndices indices = findQueueFamilies(device);
+    QueueFamilyIndices indices = findQueueFamilies(device, surface);
     bool extensionsSupported = checkDeviceExtensionSupport(device);
 
     // Placeholder for checking required features if any:
@@ -108,7 +111,7 @@ bool VulkanPhysicalDevice::isDeviceSuitable(VkPhysicalDevice device)
     return indices.isComplete() && extensionsSupported /* && featuresSupported */;
 }
 
-VulkanPhysicalDevice::QueueFamilyIndices VulkanPhysicalDevice::findQueueFamilies(VkPhysicalDevice device)
+VulkanPhysicalDevice::QueueFamilyIndices VulkanPhysicalDevice::findQueueFamilies(VkPhysicalDevice device, const VkSurfaceKHR& surface)
 {
     QueueFamilyIndices indices;
     uint32_t queueFamilyCount = 0;
@@ -124,6 +127,15 @@ VulkanPhysicalDevice::QueueFamilyIndices VulkanPhysicalDevice::findQueueFamilies
         {
             indices.graphicsFamily = i;
         }
+        
+        VkBool32 presentSupport = false;
+        vkGetPhysicalDeviceSurfaceSupportKHR(device, i, surface, &presentSupport);
+
+        if(presentSupport)
+        {
+            indices.presentFamily = i;
+        }
+        
         if (indices.isComplete())
         {
             break;

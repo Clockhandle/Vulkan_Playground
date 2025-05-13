@@ -198,5 +198,7 @@ CMakeFiles/VulkanPlayground.dir/src/application.cpp.o: \
  /usr/include/c++/13/optional \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/cstdint \
+ /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_surface.h \
  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_device.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_physical_device.h
+ /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_physical_device.h \
+ /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_surface.h

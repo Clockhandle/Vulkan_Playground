@@ -8,20 +8,22 @@
 #include <string>   
 #include <iostream> 
 #include <vulkan/vulkan.h>
+#include "vulkan_surface.h"
 
 class VulkanPhysicalDevice
 {
 public:
-    VulkanPhysicalDevice(VkInstance instance);
+    VulkanPhysicalDevice(VkInstance instance, const VkSurfaceKHR& surface);
     ~VulkanPhysicalDevice();
 
     struct QueueFamilyIndices
     {
         std::optional<uint32_t> graphicsFamily;
+        std::optional<uint32_t> presentFamily;
 
         bool isComplete() const
         {
-            return graphicsFamily.has_value();
+            return graphicsFamily.has_value() && presentFamily.has_value();
         }
     };
 
@@ -30,14 +32,14 @@ public:
     const VkPhysicalDeviceProperties& getDeviceProperties() const;
 
 private:
-    void pickPhysicalDevice(); 
-    bool isDeviceSuitable(VkPhysicalDevice device);
-    QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device);
+    void pickPhysicalDevice(const VkSurfaceKHR& surface); 
+    bool isDeviceSuitable(VkPhysicalDevice device, const VkSurfaceKHR& surface);
+    QueueFamilyIndices findQueueFamilies(VkPhysicalDevice device, const VkSurfaceKHR& surface);
     bool checkDeviceExtensionSupport(VkPhysicalDevice device); 
 
 private:
     VkInstance m_instance;
-    // VkSurfaceKHR m_surface; // Removed for now
+    VkSurfaceKHR m_surface;
     VkPhysicalDevice m_physicalDevice = VK_NULL_HANDLE; 
     QueueFamilyIndices m_queueFamilyIndices;
     VkPhysicalDeviceProperties m_deviceProperties; 

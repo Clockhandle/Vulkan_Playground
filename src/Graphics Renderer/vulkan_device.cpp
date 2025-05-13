@@ -1,9 +1,12 @@
 #include "Graphics Renderer/vulkan_device.h"
-
+#include "Graphics Renderer/vulkan_physical_device.h"
+#include <set>
+#include <vector>
 VulkanDevice::VulkanDevice(const VulkanPhysicalDevice& physicalDevice)
     :
     m_device(VK_NULL_HANDLE),
-    m_graphicsQueue(VK_NULL_HANDLE)
+    m_graphicsQueue(VK_NULL_HANDLE),
+    m_presentQueue(VK_NULL_HANDLE)
 {
     createLogicalDevice(physicalDevice);
 }
@@ -26,25 +29,40 @@ VkQueue VulkanDevice::getGraphicsQueue() const
     return m_graphicsQueue;
 }
 
+VkQueue VulkanDevice::getPresentQueue() const
+{
+    return m_presentQueue;
+}
 void VulkanDevice::createLogicalDevice(const VulkanPhysicalDevice &physicalDevice)
 {
     const VulkanPhysicalDevice::QueueFamilyIndices indices = physicalDevice.getQueueFamilyIndices();
 
-    VkDeviceQueueCreateInfo queueCreateInfo{};
-    queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
-    queueCreateInfo.queueFamilyIndex = indices.graphicsFamily.value();
-    queueCreateInfo.queueCount = 1;
+    if(!indices.isComplete())
+    {
+        throw std::runtime_error("Physical device did not find all the require queue families.");
+    }
+
+    std::vector<VkDeviceQueueCreateInfo> queueCreateInfos;
+    std::set<uint32_t> uniqueQueueFamilies = {indices.graphicsFamily.value(), indices.presentFamily.value()};
 
     float queuePriority = 1.0f;
-    queueCreateInfo.pQueuePriorities = &queuePriority;
+    for(uint32_t queueFamily : uniqueQueueFamilies)
+    {
+        VkDeviceQueueCreateInfo queueCreateInfo{};
+        queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
+        queueCreateInfo.queueFamilyIndex = queueFamily;
+        queueCreateInfo.queueCount = 1;
+        queueCreateInfo.pQueuePriorities = &queuePriority;
+        queueCreateInfos.push_back(queueCreateInfo); 
+    }
 
     VkPhysicalDeviceFeatures deviceFeatures{};
 
     VkDeviceCreateInfo createInfo{};
     createInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
 
-    createInfo.pQueueCreateInfos = &queueCreateInfo;
-    createInfo.queueCreateInfoCount = 1;
+    createInfo.queueCreateInfoCount = static_cast<uint32_t>(queueCreateInfos.size());
+    createInfo.pQueueCreateInfos = queueCreateInfos.data();
 
     createInfo.pEnabledFeatures = &deviceFeatures;
 
@@ -58,4 +76,5 @@ void VulkanDevice::createLogicalDevice(const VulkanPhysicalDevice &physicalDevic
     }
 
     vkGetDeviceQueue(m_device, indices.graphicsFamily.value(), 0 , &m_graphicsQueue);
+    vkGetDeviceQueue(m_device, indices.presentFamily.value(), 0 , &m_presentQueue);
 }

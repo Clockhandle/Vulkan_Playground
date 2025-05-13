@@ -13,12 +13,14 @@ public:
 
     VkDevice getHandle() const;
     VkQueue getGraphicsQueue() const; 
+    VkQueue getPresentQueue() const;
 
 private:
     void createLogicalDevice(const VulkanPhysicalDevice& physicalDevice);
 private:
     VkDevice m_device;
     VkQueue m_graphicsQueue;
+    VkQueue m_presentQueue;
 };
 
 #endif //VULKAN_DEVICE_H

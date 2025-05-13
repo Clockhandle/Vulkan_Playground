@@ -8,6 +8,7 @@
 #include "Graphics Renderer/vulkan_debug_messenger.h"
 #include "Graphics Renderer/vulkan_physical_device.h"
 #include "Graphics Renderer/vulkan_device.h"
+#include "Graphics Renderer/vulkan_surface.h"
 class Application
 {
 public:
@@ -26,6 +27,7 @@ private:
     std::unique_ptr<VulkanDebugMessenger> m_vulkanDebugMessenger;
     std::unique_ptr<VulkanPhysicalDevice> m_vulkanPhysicalDevice;
     std::unique_ptr<VulkanDevice> m_vulkanDevice;
+    std::unique_ptr<VulkanSurface> m_vulkanSurface;
     const bool m_enableValidationLayers;
 
 };

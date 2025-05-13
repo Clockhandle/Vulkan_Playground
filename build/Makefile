@@ -251,6 +251,30 @@ src/Graphics_Renderer/vulkan_physical_device.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_physical_device.cpp.s
 .PHONY : src/Graphics_Renderer/vulkan_physical_device.cpp.s
 
+src/Graphics_Renderer/vulkan_surface.o: src/Graphics_Renderer/vulkan_surface.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_surface.o
+
+# target to build an object file
+src/Graphics_Renderer/vulkan_surface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_surface.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_surface.cpp.o
+
+src/Graphics_Renderer/vulkan_surface.i: src/Graphics_Renderer/vulkan_surface.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_surface.i
+
+# target to preprocess a source file
+src/Graphics_Renderer/vulkan_surface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_surface.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_surface.cpp.i
+
+src/Graphics_Renderer/vulkan_surface.s: src/Graphics_Renderer/vulkan_surface.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_surface.s
+
+# target to generate assembly for a file
+src/Graphics_Renderer/vulkan_surface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_surface.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_surface.cpp.s
+
 src/application.o: src/application.cpp.o
 .PHONY : src/application.o
 
@@ -346,6 +370,9 @@ help:
 	@echo "... src/Graphics_Renderer/vulkan_physical_device.o"
 	@echo "... src/Graphics_Renderer/vulkan_physical_device.i"
 	@echo "... src/Graphics_Renderer/vulkan_physical_device.s"
+	@echo "... src/Graphics_Renderer/vulkan_surface.o"
+	@echo "... src/Graphics_Renderer/vulkan_surface.i"
+	@echo "... src/Graphics_Renderer/vulkan_surface.s"
 	@echo "... src/application.o"
 	@echo "... src/application.i"
 	@echo "... src/application.s"

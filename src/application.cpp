@@ -42,7 +42,8 @@ void Application::initVulkan()
             std::cerr << "failed to create debug messenger in application file: " << e.what() << std::endl; 
         }
     }
-    m_vulkanPhysicalDevice = std::make_unique<VulkanPhysicalDevice>(m_vulkanInstance->getHandle());
+    m_vulkanSurface = std::make_unique<VulkanSurface>(m_vulkanInstance->getHandle(), m_window->getWindow());
+    m_vulkanPhysicalDevice = std::make_unique<VulkanPhysicalDevice>(m_vulkanInstance->getHandle(), m_vulkanSurface->getHandle());
     m_vulkanDevice = std::make_unique<VulkanDevice>(*m_vulkanPhysicalDevice);
 }
 
@@ -73,6 +74,7 @@ void Application::cleanup()
 {
     //Order matters!!!
     m_vulkanDevice.reset();
+    m_vulkanSurface.reset();
     m_vulkanDebugMessenger.reset();
     m_vulkanInstance.reset();
     m_window.reset();
