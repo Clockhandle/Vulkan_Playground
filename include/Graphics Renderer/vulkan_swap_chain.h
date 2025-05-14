@@ -14,6 +14,7 @@ public:
     VkSwapchainKHR getHandle();
 private:
     void createSwapChain(const VulkanPhysicalDevice& vulkanPhysicalDevice);
+    void createImageViews();
     VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats);
     VkPresentModeKHR chooseSwapSurfacePresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes);
     VkExtent2D chooseSwapExtent(const VkSurfaceCapabilitiesKHR& capabilities);
@@ -24,6 +25,7 @@ private:
     GLFWwindow* m_window;
 
     std::vector<VkImage> m_swapChainImages;
+    std::vector<VkImageView> m_swapChainImageViews;
     VkFormat m_swapChainImageFormat;
     VkExtent2D m_swapChainExtent;
 };

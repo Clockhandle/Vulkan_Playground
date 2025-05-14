@@ -15,6 +15,11 @@ VulkanSwapChain::VulkanSwapChain(VkDevice device, const VulkanPhysicalDevice& vu
 
 VulkanSwapChain::~VulkanSwapChain()
 {
+    for (auto imageView : m_swapChainImageViews)
+    {
+        vkDestroyImageView(m_device, imageView, nullptr);
+    }
+    
     if(m_swapChain != VK_NULL_HANDLE && m_device != VK_NULL_HANDLE)
     {
         vkDestroySwapchainKHR(m_device, m_swapChain, nullptr);
@@ -75,9 +80,42 @@ void VulkanSwapChain::createSwapChain(const VulkanPhysicalDevice& vulkanPhysical
         throw std::runtime_error("failed to create swap chain!");
     }
 
-    vkGetSwapchainImagesKHR(m_device, m_swapChain, &imageCount, nullptr);
+    uint32_t actualImageCount = 0;
+    vkGetSwapchainImagesKHR(m_device, m_swapChain, &actualImageCount, nullptr);
     m_swapChainImages.resize(imageCount);
-    vkGetSwapchainImagesKHR(m_device, m_swapChain, &imageCount, m_swapChainImages.data());
+    vkGetSwapchainImagesKHR(m_device, m_swapChain, &actualImageCount, m_swapChainImages.data());
+
+    createImageViews();
+}
+
+void VulkanSwapChain::createImageViews()
+{
+    m_swapChainImageViews.resize(m_swapChainImages.size());
+    for(size_t i = 0; i < m_swapChainImages.size(); ++i)
+    {
+        VkImageViewCreateInfo createInfo{};
+        createInfo.sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;
+        createInfo.image = m_swapChainImages[i];
+        createInfo.viewType = VK_IMAGE_VIEW_TYPE_2D;
+        createInfo.format = m_swapChainImageFormat;
+
+        createInfo.components.r = VK_COMPONENT_SWIZZLE_IDENTITY;
+        createInfo.components.g = VK_COMPONENT_SWIZZLE_IDENTITY;
+        createInfo.components.b = VK_COMPONENT_SWIZZLE_IDENTITY;
+        createInfo.components.a = VK_COMPONENT_SWIZZLE_IDENTITY;
+
+        createInfo.subresourceRange.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+        createInfo.subresourceRange.baseMipLevel = 0;
+        createInfo.subresourceRange.levelCount = 1;
+        createInfo.subresourceRange.baseArrayLayer = 0;
+        createInfo.subresourceRange.layerCount = 1;
+
+        if(vkCreateImageView(m_device, &createInfo, nullptr, &m_swapChainImageViews[i]) != VK_SUCCESS)
+        {
+            throw std::runtime_error("failed to create image views!");
+        }
+
+    }
 }
 
 VkSwapchainKHR VulkanSwapChain::getHandle()
