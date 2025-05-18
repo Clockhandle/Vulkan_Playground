@@ -15,6 +15,8 @@ public:
         VkPipeline graphicsPipeline);
     ~VulkanCommandBuffers();
     
+    VkCommandBuffer getHandle() const;
+    const VkCommandBuffer* getHandlePointer() const;
     void recordCommandBuffer(uint32_t imageIndex);
 private:
     void createCommandPool(const VulkanPhysicalDevice& physicalDevice);

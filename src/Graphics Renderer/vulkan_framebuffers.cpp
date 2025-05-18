@@ -1,5 +1,4 @@
 #include "Graphics Renderer/vulkan_framebuffers.h"
-#include "vulkan_framebuffers.h"
 
 VulkanFramebuffer::VulkanFramebuffer(const VulkanSwapChain &swapChain, VkDevice device, VkRenderPass renderPass)
     :

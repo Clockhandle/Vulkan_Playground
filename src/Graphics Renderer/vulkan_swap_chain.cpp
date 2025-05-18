@@ -2,7 +2,6 @@
 #include <cstdint>
 #include <limits>
 #include <algorithm>
-#include "vulkan_swap_chain.h"
 
 VulkanSwapChain::VulkanSwapChain(VkDevice device, const VulkanPhysicalDevice& vulkanPhysicalDevice, VkSurfaceKHR surface, GLFWwindow* window)
     :

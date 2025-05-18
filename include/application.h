@@ -12,6 +12,8 @@
 #include "Graphics Renderer/vulkan_swap_chain.h"
 #include "Graphics Renderer/vulkan_graphics_pipeline.h"
 #include "Graphics Renderer/vulkan_framebuffers.h"
+#include "Graphics Renderer/vulkan_command_buffers.h"
+#include "Graphics Renderer/vulkan_sync_objects.h"
 
 class Application
 {
@@ -25,6 +27,7 @@ private:
     void initVulkan();
     void mainLoop();
     void cleanup();
+    void drawFrame();
 private:
     std::unique_ptr<Window> m_window;
     std::unique_ptr<VulkanInstance> m_vulkanInstance;
@@ -35,6 +38,8 @@ private:
     std::unique_ptr<VulkanSwapChain> m_vulkanSwapChain;
     std::unique_ptr<VulkanGraphicsPipeline> m_vulkanGraphicsPipeline;
     std::unique_ptr<VulkanFramebuffer> m_vulkanFramebuffer;
+    std::unique_ptr<VulkanCommandBuffers> m_vulkanCommandBuffers;
+    std::unique_ptr<VulkanSyncObjects> m_vulkanSyncObjects;
     const bool m_enableValidationLayers;
 
 };

@@ -168,6 +168,30 @@ clean_build/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_build.dir/build.make CMakeFiles/clean_build.dir/build
 .PHONY : clean_build/fast
 
+src/Graphics_Renderer/vulkan_command_buffers.o: src/Graphics_Renderer/vulkan_command_buffers.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_command_buffers.o
+
+# target to build an object file
+src/Graphics_Renderer/vulkan_command_buffers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_command_buffers.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_command_buffers.cpp.o
+
+src/Graphics_Renderer/vulkan_command_buffers.i: src/Graphics_Renderer/vulkan_command_buffers.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_command_buffers.i
+
+# target to preprocess a source file
+src/Graphics_Renderer/vulkan_command_buffers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_command_buffers.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_command_buffers.cpp.i
+
+src/Graphics_Renderer/vulkan_command_buffers.s: src/Graphics_Renderer/vulkan_command_buffers.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_command_buffers.s
+
+# target to generate assembly for a file
+src/Graphics_Renderer/vulkan_command_buffers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_command_buffers.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_command_buffers.cpp.s
+
 src/Graphics_Renderer/vulkan_debug_messenger.o: src/Graphics_Renderer/vulkan_debug_messenger.cpp.o
 .PHONY : src/Graphics_Renderer/vulkan_debug_messenger.o
 
@@ -215,6 +239,30 @@ src/Graphics_Renderer/vulkan_device.s: src/Graphics_Renderer/vulkan_device.cpp.s
 src/Graphics_Renderer/vulkan_device.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_device.cpp.s
 .PHONY : src/Graphics_Renderer/vulkan_device.cpp.s
+
+src/Graphics_Renderer/vulkan_framebuffers.o: src/Graphics_Renderer/vulkan_framebuffers.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_framebuffers.o
+
+# target to build an object file
+src/Graphics_Renderer/vulkan_framebuffers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_framebuffers.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_framebuffers.cpp.o
+
+src/Graphics_Renderer/vulkan_framebuffers.i: src/Graphics_Renderer/vulkan_framebuffers.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_framebuffers.i
+
+# target to preprocess a source file
+src/Graphics_Renderer/vulkan_framebuffers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_framebuffers.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_framebuffers.cpp.i
+
+src/Graphics_Renderer/vulkan_framebuffers.s: src/Graphics_Renderer/vulkan_framebuffers.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_framebuffers.s
+
+# target to generate assembly for a file
+src/Graphics_Renderer/vulkan_framebuffers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_framebuffers.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_framebuffers.cpp.s
 
 src/Graphics_Renderer/vulkan_graphics_pipeline.o: src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.o
 .PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.o
@@ -360,6 +408,30 @@ src/Graphics_Renderer/vulkan_swap_chain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_swap_chain.cpp.s
 .PHONY : src/Graphics_Renderer/vulkan_swap_chain.cpp.s
 
+src/Graphics_Renderer/vulkan_sync_objects.o: src/Graphics_Renderer/vulkan_sync_objects.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_sync_objects.o
+
+# target to build an object file
+src/Graphics_Renderer/vulkan_sync_objects.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_sync_objects.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_sync_objects.cpp.o
+
+src/Graphics_Renderer/vulkan_sync_objects.i: src/Graphics_Renderer/vulkan_sync_objects.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_sync_objects.i
+
+# target to preprocess a source file
+src/Graphics_Renderer/vulkan_sync_objects.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_sync_objects.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_sync_objects.cpp.i
+
+src/Graphics_Renderer/vulkan_sync_objects.s: src/Graphics_Renderer/vulkan_sync_objects.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_sync_objects.s
+
+# target to generate assembly for a file
+src/Graphics_Renderer/vulkan_sync_objects.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_sync_objects.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_sync_objects.cpp.s
+
 src/application.o: src/application.cpp.o
 .PHONY : src/application.o
 
@@ -444,12 +516,18 @@ help:
 	@echo "... clean_build"
 	@echo "... run"
 	@echo "... VulkanPlayground"
+	@echo "... src/Graphics_Renderer/vulkan_command_buffers.o"
+	@echo "... src/Graphics_Renderer/vulkan_command_buffers.i"
+	@echo "... src/Graphics_Renderer/vulkan_command_buffers.s"
 	@echo "... src/Graphics_Renderer/vulkan_debug_messenger.o"
 	@echo "... src/Graphics_Renderer/vulkan_debug_messenger.i"
 	@echo "... src/Graphics_Renderer/vulkan_debug_messenger.s"
 	@echo "... src/Graphics_Renderer/vulkan_device.o"
 	@echo "... src/Graphics_Renderer/vulkan_device.i"
 	@echo "... src/Graphics_Renderer/vulkan_device.s"
+	@echo "... src/Graphics_Renderer/vulkan_framebuffers.o"
+	@echo "... src/Graphics_Renderer/vulkan_framebuffers.i"
+	@echo "... src/Graphics_Renderer/vulkan_framebuffers.s"
 	@echo "... src/Graphics_Renderer/vulkan_graphics_pipeline.o"
 	@echo "... src/Graphics_Renderer/vulkan_graphics_pipeline.i"
 	@echo "... src/Graphics_Renderer/vulkan_graphics_pipeline.s"
@@ -468,6 +546,9 @@ help:
 	@echo "... src/Graphics_Renderer/vulkan_swap_chain.o"
 	@echo "... src/Graphics_Renderer/vulkan_swap_chain.i"
 	@echo "... src/Graphics_Renderer/vulkan_swap_chain.s"
+	@echo "... src/Graphics_Renderer/vulkan_sync_objects.o"
+	@echo "... src/Graphics_Renderer/vulkan_sync_objects.i"
+	@echo "... src/Graphics_Renderer/vulkan_sync_objects.s"
 	@echo "... src/application.o"
 	@echo "... src/application.i"
 	@echo "... src/application.s"

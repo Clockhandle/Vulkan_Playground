@@ -1,4 +1,4 @@
-#include "vulkan_command_buffers.h"
+#include "Graphics Renderer/vulkan_command_buffers.h"
 
 VulkanCommandBuffers::VulkanCommandBuffers
         ( VkDevice device,
@@ -54,6 +54,16 @@ void VulkanCommandBuffers::createCommandBuffer()
     {
         throw std::runtime_error("failed to allocate command buffer!");
     }
+}
+
+VkCommandBuffer VulkanCommandBuffers::getHandle() const
+{
+    return m_commandBuffer;
+}
+
+const VkCommandBuffer* VulkanCommandBuffers::getHandlePointer() const
+{
+    return &m_commandBuffer;
 }
 
 void VulkanCommandBuffers::recordCommandBuffer(uint32_t imageIndex)
