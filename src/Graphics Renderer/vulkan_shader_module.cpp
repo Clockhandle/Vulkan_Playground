@@ -1,6 +1,6 @@
 #include "Graphics Renderer/vulkan_shader_module.h"
 #include <fstream>
-
+#include <stdexcept>
 VulkanShaderModule::VulkanShaderModule(VkDevice device, const std::string& filepath)
     :
     m_device(device),

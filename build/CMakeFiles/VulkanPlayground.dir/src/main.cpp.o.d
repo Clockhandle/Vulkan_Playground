@@ -202,4 +202,6 @@ CMakeFiles/VulkanPlayground.dir/src/main.cpp.o: \
  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_device.h \
  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_physical_device.h \
  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_surface.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_swap_chain.h
+ /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_swap_chain.h \
+ /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_graphics_pipeline.h \
+ /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_shader_module.h

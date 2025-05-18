@@ -12,6 +12,8 @@ public:
     ~VulkanSwapChain();
 
     VkSwapchainKHR getHandle();
+    VkFormat getFormat();
+    VkExtent2D getExtent();
 private:
     void createSwapChain(const VulkanPhysicalDevice& vulkanPhysicalDevice);
     void createImageViews();

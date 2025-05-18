@@ -10,6 +10,7 @@
 #include "Graphics Renderer/vulkan_device.h"
 #include "Graphics Renderer/vulkan_surface.h"
 #include "Graphics Renderer/vulkan_swap_chain.h"
+#include "Graphics Renderer/vulkan_graphics_pipeline.h"
 
 class Application
 {
@@ -31,6 +32,7 @@ private:
     std::unique_ptr<VulkanDevice> m_vulkanDevice;
     std::unique_ptr<VulkanSurface> m_vulkanSurface;
     std::unique_ptr<VulkanSwapChain> m_vulkanSwapChain;
+    std::unique_ptr<VulkanGraphicsPipeline> m_vulkanGraphicsPipeline;
     const bool m_enableValidationLayers;
 
 };

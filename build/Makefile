@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named CompileShaders
+
+# Build rule for target.
+CompileShaders: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CompileShaders
+.PHONY : CompileShaders
+
+# fast build rule for target.
+CompileShaders/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CompileShaders.dir/build.make CMakeFiles/CompileShaders.dir/build
+.PHONY : CompileShaders/fast
+
+#=============================================================================
 # Target rules for targets named VulkanPlayground
 
 # Build rule for target.
@@ -203,6 +216,30 @@ src/Graphics_Renderer/vulkan_device.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_device.cpp.s
 .PHONY : src/Graphics_Renderer/vulkan_device.cpp.s
 
+src/Graphics_Renderer/vulkan_graphics_pipeline.o: src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.o
+
+# target to build an object file
+src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.o
+
+src/Graphics_Renderer/vulkan_graphics_pipeline.i: src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.i
+
+# target to preprocess a source file
+src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.i
+
+src/Graphics_Renderer/vulkan_graphics_pipeline.s: src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.s
+
+# target to generate assembly for a file
+src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.s
+
 src/Graphics_Renderer/vulkan_instance.o: src/Graphics_Renderer/vulkan_instance.cpp.o
 .PHONY : src/Graphics_Renderer/vulkan_instance.o
 
@@ -250,6 +287,30 @@ src/Graphics_Renderer/vulkan_physical_device.s: src/Graphics_Renderer/vulkan_phy
 src/Graphics_Renderer/vulkan_physical_device.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_physical_device.cpp.s
 .PHONY : src/Graphics_Renderer/vulkan_physical_device.cpp.s
+
+src/Graphics_Renderer/vulkan_shader_module.o: src/Graphics_Renderer/vulkan_shader_module.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_shader_module.o
+
+# target to build an object file
+src/Graphics_Renderer/vulkan_shader_module.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_shader_module.cpp.o
+.PHONY : src/Graphics_Renderer/vulkan_shader_module.cpp.o
+
+src/Graphics_Renderer/vulkan_shader_module.i: src/Graphics_Renderer/vulkan_shader_module.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_shader_module.i
+
+# target to preprocess a source file
+src/Graphics_Renderer/vulkan_shader_module.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_shader_module.cpp.i
+.PHONY : src/Graphics_Renderer/vulkan_shader_module.cpp.i
+
+src/Graphics_Renderer/vulkan_shader_module.s: src/Graphics_Renderer/vulkan_shader_module.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_shader_module.s
+
+# target to generate assembly for a file
+src/Graphics_Renderer/vulkan_shader_module.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_shader_module.cpp.s
+.PHONY : src/Graphics_Renderer/vulkan_shader_module.cpp.s
 
 src/Graphics_Renderer/vulkan_surface.o: src/Graphics_Renderer/vulkan_surface.cpp.o
 .PHONY : src/Graphics_Renderer/vulkan_surface.o
@@ -379,6 +440,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... CompileShaders"
 	@echo "... clean_build"
 	@echo "... run"
 	@echo "... VulkanPlayground"
@@ -388,12 +450,18 @@ help:
 	@echo "... src/Graphics_Renderer/vulkan_device.o"
 	@echo "... src/Graphics_Renderer/vulkan_device.i"
 	@echo "... src/Graphics_Renderer/vulkan_device.s"
+	@echo "... src/Graphics_Renderer/vulkan_graphics_pipeline.o"
+	@echo "... src/Graphics_Renderer/vulkan_graphics_pipeline.i"
+	@echo "... src/Graphics_Renderer/vulkan_graphics_pipeline.s"
 	@echo "... src/Graphics_Renderer/vulkan_instance.o"
 	@echo "... src/Graphics_Renderer/vulkan_instance.i"
 	@echo "... src/Graphics_Renderer/vulkan_instance.s"
 	@echo "... src/Graphics_Renderer/vulkan_physical_device.o"
 	@echo "... src/Graphics_Renderer/vulkan_physical_device.i"
 	@echo "... src/Graphics_Renderer/vulkan_physical_device.s"
+	@echo "... src/Graphics_Renderer/vulkan_shader_module.o"
+	@echo "... src/Graphics_Renderer/vulkan_shader_module.i"
+	@echo "... src/Graphics_Renderer/vulkan_shader_module.s"
 	@echo "... src/Graphics_Renderer/vulkan_surface.o"
 	@echo "... src/Graphics_Renderer/vulkan_surface.i"
 	@echo "... src/Graphics_Renderer/vulkan_surface.s"

@@ -123,6 +123,16 @@ VkSwapchainKHR VulkanSwapChain::getHandle()
     return m_swapChain;
 }
 
+VkFormat VulkanSwapChain::getFormat()
+{
+    return m_swapChainImageFormat;
+}
+
+VkExtent2D VulkanSwapChain::getExtent()
+{
+    return m_swapChainExtent;
+}
+
 VkSurfaceFormatKHR VulkanSwapChain::chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR> &availableFormats)
 {
     for(const auto& availableFormat : availableFormats)
