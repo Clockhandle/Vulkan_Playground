@@ -1,4 +1,5 @@
 #include "Graphics Renderer/vulkan_framebuffers.h"
+#include "vulkan_framebuffers.h"
 
 VulkanFramebuffer::VulkanFramebuffer(const VulkanSwapChain &swapChain, VkDevice device, VkRenderPass renderPass)
     :
@@ -16,6 +17,11 @@ VulkanFramebuffer::~VulkanFramebuffer()
             vkDestroyFramebuffer(m_device, framebuffer, nullptr);
         }
     }
+}
+
+VkFramebuffer VulkanFramebuffer::getHandle(uint32_t imageIndex) const
+{
+    return m_swapChainFramebuffers[imageIndex];
 }
 
 void VulkanFramebuffer::createFramebuffers(const VulkanSwapChain &swapChain)
