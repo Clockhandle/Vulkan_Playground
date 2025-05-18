@@ -2,6 +2,7 @@
 #include <cstdint>
 #include <limits>
 #include <algorithm>
+#include "vulkan_swap_chain.h"
 
 VulkanSwapChain::VulkanSwapChain(VkDevice device, const VulkanPhysicalDevice& vulkanPhysicalDevice, VkSurfaceKHR surface, GLFWwindow* window)
     :
@@ -118,21 +119,25 @@ void VulkanSwapChain::createImageViews()
     }
 }
 
-VkSwapchainKHR VulkanSwapChain::getHandle()
+VkSwapchainKHR VulkanSwapChain::getHandle() const
 {
     return m_swapChain;
 }
 
-VkFormat VulkanSwapChain::getFormat()
+VkFormat VulkanSwapChain::getFormat() const
 {
     return m_swapChainImageFormat;
 }
 
-VkExtent2D VulkanSwapChain::getExtent()
+VkExtent2D VulkanSwapChain::getExtent() const
 {
     return m_swapChainExtent;
 }
 
+const std::vector<VkImageView> &VulkanSwapChain::getImageViews() const
+{
+    return m_swapChainImageViews;
+}
 VkSurfaceFormatKHR VulkanSwapChain::chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR> &availableFormats)
 {
     for(const auto& availableFormat : availableFormats)

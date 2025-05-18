@@ -11,9 +11,10 @@ public:
     VulkanSwapChain(VkDevice device, const VulkanPhysicalDevice& vulkanPhysicalDevice, VkSurfaceKHR surface, GLFWwindow* window);
     ~VulkanSwapChain();
 
-    VkSwapchainKHR getHandle();
-    VkFormat getFormat();
-    VkExtent2D getExtent();
+    VkSwapchainKHR getHandle() const;
+    VkFormat getFormat() const;
+    VkExtent2D getExtent() const;
+    const std::vector<VkImageView>& getImageViews() const;
 private:
     void createSwapChain(const VulkanPhysicalDevice& vulkanPhysicalDevice);
     void createImageViews();
