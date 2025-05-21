@@ -4,6 +4,7 @@
 #include <vulkan/vulkan.h>
 #include "vulkan_physical_device.h"
 #include "vulkan_framebuffers.h"
+#include "vulkan_config.h"
 class VulkanCommandBuffers {
 public:
     VulkanCommandBuffers(
@@ -15,19 +16,19 @@ public:
         VkPipeline graphicsPipeline);
     ~VulkanCommandBuffers();
     
-    VkCommandBuffer getHandle() const;
-    const VkCommandBuffer* getHandlePointer() const;
-    void recordCommandBuffer(uint32_t imageIndex);
+    VkCommandBuffer getHandle(uint32_t frameIndex) const;
+    const VkCommandBuffer* getHandlePointer(uint32_t frameIndex) const;
+    void recordCommandBuffer(uint32_t frameIndex, uint32_t imageIndex);
 private:
     void createCommandPool(const VulkanPhysicalDevice& physicalDevice);
-    void createCommandBuffer();
+    void createCommandBuffers();
 private:
     VkDevice m_device;
     VkRenderPass m_renderPass;
-    const VulkanFramebuffer& m_swapChainFramebuffers;
+    const VulkanFramebuffer& m_vulkanFramebufferRef;
     VkExtent2D m_swapChainExtent;
     VkCommandPool m_commandPool;
-    VkCommandBuffer m_commandBuffer;
+    std::vector<VkCommandBuffer> m_commandBuffers;
     VkPipeline m_graphicsPipeline;
 };
 

@@ -14,6 +14,7 @@
 #include "Graphics Renderer/vulkan_framebuffers.h"
 #include "Graphics Renderer/vulkan_command_buffers.h"
 #include "Graphics Renderer/vulkan_sync_objects.h"
+#include "Graphics Renderer/vulkan_config.h"
 
 class Application
 {
@@ -41,6 +42,7 @@ private:
     std::unique_ptr<VulkanCommandBuffers> m_vulkanCommandBuffers;
     std::unique_ptr<VulkanSyncObjects> m_vulkanSyncObjects;
     const bool m_enableValidationLayers;
+    uint32_t m_currentFrame;
 
 };
 

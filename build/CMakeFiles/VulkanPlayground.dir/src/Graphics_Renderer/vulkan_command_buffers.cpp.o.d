@@ -182,4 +182,5 @@ CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_command_buffers.cpp
  /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h \
  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_framebuffers.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_swap_chain.h
+ /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_swap_chain.h \
+ /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_config.h

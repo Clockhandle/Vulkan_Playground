@@ -1,16 +1,14 @@
 
 #include "application.h"
 
-constexpr int WINDOW_WIDTH = 800;
-constexpr int WINDOW_HEIGHT = 600;
-
 Application::Application() 
     :
     #ifdef DEBUG
-        m_enableValidationLayers(true)
+        m_enableValidationLayers(true),
     #else
-        m_enableValidationLayers(false)
+        m_enableValidationLayers(false),
     #endif
+    m_currentFrame(0)
 {
     std::cout << "Create Application constructor" << std::endl;
 }
@@ -97,36 +95,36 @@ void Application::cleanup()
 
 void Application::drawFrame()
 {
-    VkFence fence = m_vulkanSyncObjects->getFence();
+    VkFence fence = m_vulkanSyncObjects->getFence(m_currentFrame);
     vkWaitForFences(m_vulkanDevice->getHandle(), 1, &fence, VK_TRUE, UINT64_MAX);
 
     uint32_t imageIndex;
     vkAcquireNextImageKHR
     (m_vulkanDevice->getHandle(),
     m_vulkanSwapChain->getHandle(),
-    UINT64_MAX, m_vulkanSyncObjects->getImageAvailableSemaphore(),
+    UINT64_MAX, m_vulkanSyncObjects->getImageAvailableSemaphore(m_currentFrame),
     VK_NULL_HANDLE,
     &imageIndex);
 
     vkResetFences(m_vulkanDevice->getHandle(), 1, &fence);
 
-    vkResetCommandBuffer(m_vulkanCommandBuffers->getHandle(), 0);
+    vkResetCommandBuffer(m_vulkanCommandBuffers->getHandle(m_currentFrame), 0);
 
-    m_vulkanCommandBuffers->recordCommandBuffer(imageIndex);
+    m_vulkanCommandBuffers->recordCommandBuffer(m_currentFrame, imageIndex);
 
     VkSubmitInfo submitInfo{};
     submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
 
-    VkSemaphore waitSemaphore[] = {m_vulkanSyncObjects->getImageAvailableSemaphore()};
+    VkSemaphore waitSemaphore[] = {m_vulkanSyncObjects->getImageAvailableSemaphore(m_currentFrame)};
     VkPipelineStageFlags waitStages[] = {VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT};
     submitInfo.waitSemaphoreCount = 1;
     submitInfo.pWaitSemaphores = waitSemaphore;
     submitInfo.pWaitDstStageMask = waitStages;
     submitInfo.commandBufferCount = 1;
     //VkCommandBuffer commandBuffer = m_vulkanCommandBuffers->getHandle();
-    submitInfo.pCommandBuffers = m_vulkanCommandBuffers->getHandlePointer();
+    submitInfo.pCommandBuffers = m_vulkanCommandBuffers->getHandlePointer(m_currentFrame);
 
-    VkSemaphore signalSemaphore[] = {m_vulkanSyncObjects->getRenderFinishedSemaphore()};
+    VkSemaphore signalSemaphore[] = {m_vulkanSyncObjects->getRenderFinishedSemaphore(m_currentFrame)};
     submitInfo.signalSemaphoreCount = 1;
     submitInfo.pSignalSemaphores = signalSemaphore;
 
@@ -148,5 +146,7 @@ void Application::drawFrame()
     presentInfo.pResults = nullptr;
     
     vkQueuePresentKHR(m_vulkanDevice->getPresentQueue(), &presentInfo);
+
+    m_currentFrame = (m_currentFrame + 1) % MAX_FRAMES_IN_FLIGHT;
 
 }

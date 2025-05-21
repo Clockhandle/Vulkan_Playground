@@ -2,22 +2,23 @@
 #define VULKAN_SYNC_OBJECTS_H
 
 #include <vulkan/vulkan.h>
-
+#include <vector>
+#include "vulkan_config.h"
 class VulkanSyncObjects {
 public:
     VulkanSyncObjects(VkDevice device);
     ~VulkanSyncObjects();
 
-    VkSemaphore getImageAvailableSemaphore() const;
-    VkSemaphore getRenderFinishedSemaphore() const;
-    VkFence getFence() const;
+    VkSemaphore getImageAvailableSemaphore(uint32_t frameIndex) const;
+    VkSemaphore getRenderFinishedSemaphore(uint32_t frameIndex) const;
+    VkFence getFence(uint32_t frameIndex) const;
 private:
     void createSyncObjects();
 private:
     VkDevice m_device;
-    VkSemaphore m_imageAvailableSemaphore;
-    VkSemaphore m_renderFinishedSemaphore;
-    VkFence m_inFlightFence;
+    std::vector<VkSemaphore> m_imageAvailableSemaphores;
+    std::vector<VkSemaphore> m_renderFinishedSemaphores;
+    std::vector<VkFence> m_inFlightFences;
     // Add public methods and members here
 };
 

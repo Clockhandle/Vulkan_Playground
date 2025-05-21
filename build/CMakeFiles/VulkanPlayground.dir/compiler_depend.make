@@ -3,6 +3,7 @@
 
 CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_command_buffers.cpp.o: /home/clockhandle/Vulkan_Playground/src/Graphics\ Renderer/vulkan_command_buffers.cpp \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_command_buffers.h \
+  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_config.h \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_framebuffers.h \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_physical_device.h \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_surface.h \
@@ -2133,6 +2134,7 @@ CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_swap_chain.cpp.o: /
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
 CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_sync_objects.cpp.o: /home/clockhandle/Vulkan_Playground/src/Graphics\ Renderer/vulkan_sync_objects.cpp \
+  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_config.h \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_sync_objects.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -2171,17 +2173,21 @@ CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_sync_objects.cpp.o:
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
   /usr/include/c++/13/bits/stl_algobase.h \
+  /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stl_vector.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
@@ -2206,6 +2212,7 @@ CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_sync_objects.cpp.o:
   /usr/include/c++/13/tuple \
   /usr/include/c++/13/type_traits \
   /usr/include/c++/13/typeinfo \
+  /usr/include/c++/13/vector \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -2298,6 +2305,7 @@ CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_sync_objects.cpp.o:
 
 CMakeFiles/VulkanPlayground.dir/src/application.cpp.o: /home/clockhandle/Vulkan_Playground/src/application.cpp \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_command_buffers.h \
+  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_config.h \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_debug_messenger.h \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_device.h \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_framebuffers.h \
@@ -2546,6 +2554,7 @@ CMakeFiles/VulkanPlayground.dir/src/application.cpp.o: /home/clockhandle/Vulkan_
 
 CMakeFiles/VulkanPlayground.dir/src/main.cpp.o: /home/clockhandle/Vulkan_Playground/src/main.cpp \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_command_buffers.h \
+  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_config.h \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_debug_messenger.h \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_device.h \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_framebuffers.h \
@@ -3131,9 +3140,7 @@ CMakeFiles/VulkanPlayground.dir/src/window.cpp.o: /home/clockhandle/Vulkan_Playg
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/usr/include/c++/13/bits/exception.h:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+/usr/include/c++/13/bits/stl_construct.h:
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
@@ -3195,6 +3202,14 @@ CMakeFiles/VulkanPlayground.dir/src/window.cpp.o: /home/clockhandle/Vulkan_Playg
 
 /home/clockhandle/Vulkan_Playground/src/Graphics\ Renderer/vulkan_command_buffers.cpp:
 
+/usr/include/c++/13/bits/cpp_type_traits.h:
+
+/usr/include/c++/13/string:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
 /usr/include/c++/13/bits/basic_ios.tcc:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
@@ -3203,11 +3218,21 @@ CMakeFiles/VulkanPlayground.dir/src/window.cpp.o: /home/clockhandle/Vulkan_Playg
 
 /usr/include/c++/13/bits/move.h:
 
+/usr/include/c++/13/ext/alloc_traits.h:
+
+/home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_config.h:
+
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/c++/13/bits/shared_ptr.h:
 
 /usr/include/c++/13/bits/localefwd.h:
+
+/usr/include/c++/13/bits/exception.h:
+
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
+
+/usr/include/alloca.h:
 
 /home/clockhandle/Vulkan_Playground/src/Graphics\ Renderer/vulkan_device.cpp:
 
@@ -3225,16 +3250,6 @@ CMakeFiles/VulkanPlayground.dir/src/window.cpp.o: /home/clockhandle/Vulkan_Playg
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
-/usr/include/alloca.h:
-
-/usr/include/c++/13/bits/cpp_type_traits.h:
-
-/usr/include/c++/13/string:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
 /usr/include/c++/13/vector:
 
 /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_framebuffers.h:
@@ -3242,12 +3257,6 @@ CMakeFiles/VulkanPlayground.dir/src/window.cpp.o: /home/clockhandle/Vulkan_Playg
 /usr/include/c++/13/bits/streambuf_iterator.h:
 
 /usr/include/GLFW/glfw3.h:
-
-/usr/include/vk_video/vulkan_video_codec_h264std.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/c++/13/bits/stl_bvector.h:
 
@@ -3289,9 +3298,9 @@ CMakeFiles/VulkanPlayground.dir/src/window.cpp.o: /home/clockhandle/Vulkan_Playg
 
 /usr/include/c++/13/bits/invoke.h:
 
-/usr/include/c++/13/streambuf:
-
 /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_physical_device.h:
+
+/usr/include/c++/13/streambuf:
 
 /usr/include/c++/13/bits/memory_resource.h:
 
@@ -3303,7 +3312,11 @@ CMakeFiles/VulkanPlayground.dir/src/window.cpp.o: /home/clockhandle/Vulkan_Playg
 
 /usr/include/c++/13/bits/stl_algobase.h:
 
-/usr/include/c++/13/bits/stl_construct.h:
+/usr/include/vk_video/vulkan_video_codec_h264std.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/vk_video/vulkan_video_codec_h264std_encode.h:
 
@@ -3466,10 +3479,6 @@ CMakeFiles/VulkanPlayground.dir/src/window.cpp.o: /home/clockhandle/Vulkan_Playg
 /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_surface.h:
 
 /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_debug_messenger.h:
-
-/usr/include/c++/13/ext/alloc_traits.h:
-
-/home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_config.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
