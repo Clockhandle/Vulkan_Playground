@@ -169,9 +169,10 @@ CMakeFiles/VulkanPlayground.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc \
- /home/clockhandle/Vulkan_Playground/include/window.h \
- /usr/include/GLFW/glfw3.h /usr/include/vulkan/vulkan.h \
+ /usr/include/c++/13/bits/istream.tcc /usr/include/c++/13/vector \
+ /usr/include/c++/13/bits/stl_vector.h \
+ /usr/include/c++/13/bits/stl_bvector.h \
+ /usr/include/c++/13/bits/vector.tcc /usr/include/vulkan/vulkan.h \
  /usr/include/vulkan/vk_platform.h /usr/include/vulkan/vulkan_core.h \
  /usr/include/vk_video/vulkan_video_codec_h264std.h \
  /usr/include/vk_video/vulkan_video_codecs_common.h \
@@ -186,29 +187,5 @@ CMakeFiles/VulkanPlayground.dir/src/main.cpp.o: \
  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
  /usr/include/vk_video/vulkan_video_codec_av1std.h \
  /usr/include/vk_video/vulkan_video_codec_av1std_encode.h \
- /usr/include/GL/gl.h /usr/include/GL/glext.h \
- /usr/include/KHR/khrplatform.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_instance.h \
- /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
- /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/cstring \
- /usr/include/string.h /usr/include/strings.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_debug_messenger.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_physical_device.h \
- /usr/include/c++/13/optional \
- /usr/include/c++/13/bits/enable_special_members.h \
- /usr/include/c++/13/cstdint \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_surface.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_device.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_physical_device.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_surface.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_swap_chain.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_graphics_pipeline.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_shader_module.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_framebuffers.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_swap_chain.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_command_buffers.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_framebuffers.h \
  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_config.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_sync_objects.h \
- /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_config.h
+ /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_shader_module.h

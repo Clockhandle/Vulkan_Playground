@@ -1,5 +1,19 @@
-
 #include "application.h"
+#include "window.h" // Assuming window.h is needed for Window class definition
+#include "Graphics Renderer/vulkan_instance.h"
+#include "Graphics Renderer/vulkan_debug_messenger.h"
+#include "Graphics Renderer/vulkan_surface.h"
+#include "Graphics Renderer/vulkan_physical_device.h"
+#include "Graphics Renderer/vulkan_device.h"
+#include "Graphics Renderer/vulkan_swap_chain.h"
+#include "Graphics Renderer/vulkan_graphics_pipeline.h"
+#include "Graphics Renderer/vulkan_framebuffers.h"
+#include "Graphics Renderer/vulkan_command_buffers.h"
+#include "Graphics Renderer/vulkan_sync_objects.h"
+// VulkanShaderModule is already included via application.h for the unique_ptr members
+
+#include <stdexcept> // For std::runtime_error
+#include <iostream>  // For std::cerr
 
 Application::Application() 
     :
@@ -43,9 +57,18 @@ void Application::initVulkan()
     m_vulkanSurface = std::make_unique<VulkanSurface>(m_vulkanInstance->getHandle(), m_window->getWindow());
     m_vulkanPhysicalDevice = std::make_unique<VulkanPhysicalDevice>(m_vulkanInstance->getHandle(), m_vulkanSurface->getHandle());
     m_vulkanDevice = std::make_unique<VulkanDevice>(*m_vulkanPhysicalDevice);
-    recreateSwapChain();
-    m_vulkanSyncObjects = std::make_unique<VulkanSyncObjects>(m_vulkanDevice->getHandle());
 
+    // Create global shader modules once
+    try {
+        m_globalVertShaderModule = std::make_unique<VulkanShaderModule>(m_vulkanDevice->getHandle(), "shaders/shader.vert.spv");
+        m_globalFragShaderModule = std::make_unique<VulkanShaderModule>(m_vulkanDevice->getHandle(), "shaders/shader.frag.spv");
+    } catch (const std::exception& e) {
+        throw std::runtime_error("Failed to create global shader modules: " + std::string(e.what()));
+    }
+    
+    recreateSwapChain(); 
+    
+    m_vulkanSyncObjects = std::make_unique<VulkanSyncObjects>(m_vulkanDevice->getHandle());
 }
 
 void Application::run()
@@ -58,9 +81,9 @@ void Application::run()
     }
     catch(const std::exception& e)
     {
-        std::cerr << "What the fuck? " <<  e.what() << '\n';
+        std::cerr << e.what() << std::endl;
+        // Consider re-throwing or exiting if initialization fails critically
     }
-    cleanup();
 }
 
 void Application::mainLoop()
@@ -83,46 +106,77 @@ void Application::recreateSwapChain() {
         glfwWaitEvents();
     }
 
-    if (m_vulkanDevice && m_vulkanDevice->getHandle() != VK_NULL_HANDLE) {
-        vkDeviceWaitIdle(m_vulkanDevice->getHandle());
+    VkSwapchainKHR oldSwapchainHandle = VK_NULL_HANDLE;
+    std::unique_ptr<VulkanSwapChain> tempOldSwapChain = nullptr; // To hold the old swapchain temporarily
+
+    if (m_vulkanSwapChain) {
+        oldSwapchainHandle = m_vulkanSwapChain->getHandle();
+        tempOldSwapChain = std::move(m_vulkanSwapChain); // Move ownership from m_vulkanSwapChain
     }
 
-    cleanupSwapChain(); // Use the more specific cleanup
-
-    // Re-create the swap chain
     m_vulkanSwapChain = std::make_unique<VulkanSwapChain>(
         m_vulkanDevice->getHandle(),
         *m_vulkanPhysicalDevice,
         m_vulkanSurface->getHandle(),
-        m_window->getWindow()
+        m_window->getWindow(),
+        oldSwapchainHandle // Pass the handle of the (soon-to-be-retired) old swapchain
     );
+
+    if (m_vulkanDevice && m_vulkanDevice->getHandle() != VK_NULL_HANDLE) {
+        vkDeviceWaitIdle(m_vulkanDevice->getHandle());
+    }
+
+    // 4. Officially retire the old VulkanSwapChain object (if one existed)
+    if (tempOldSwapChain) {
+        m_retiredSwapChains.push_back(std::move(tempOldSwapChain));
+    }
+
+    cleanupSwapChain(); // This resets m_vulkanCommandBuffers, m_vulkanFramebuffer, m_vulkanGraphicsPipeline
+
+    // 6. Recreate resources dependent on the NEW swapchain
+    if (!m_globalVertShaderModule || !m_globalFragShaderModule) {
+        throw std::runtime_error("Global shader modules not initialized before pipeline creation!");
+    }
+
     m_vulkanGraphicsPipeline = std::make_unique<VulkanGraphicsPipeline>(
         m_vulkanDevice->getHandle(),
-        m_vulkanSwapChain->getFormat(),
-        m_vulkanSwapChain->getExtent()
+        m_vulkanSwapChain->getFormat(), // New swapchain's format
+        m_vulkanSwapChain->getExtent(),   // New swapchain's extent
+        m_globalVertShaderModule->getHandle(), 
+        m_globalFragShaderModule->getHandle()  
     );
     m_vulkanFramebuffer = std::make_unique<VulkanFramebuffer>(
-        *m_vulkanSwapChain,
+        *m_vulkanSwapChain, // New swapchain
         m_vulkanDevice->getHandle(),
         m_vulkanGraphicsPipeline->getRenderPassHandle()
     );
-
     m_vulkanCommandBuffers = std::make_unique<VulkanCommandBuffers>(
-        m_vulkanDevice->getHandle(),
-        *m_vulkanPhysicalDevice,
+        m_vulkanDevice->getHandle(), 
+        *m_vulkanPhysicalDevice, 
         m_vulkanGraphicsPipeline->getRenderPassHandle(), 
         *m_vulkanFramebuffer, 
-        m_vulkanSwapChain->getExtent(), 
+        m_vulkanSwapChain->getExtent(), // New swapchain's extent
         m_vulkanGraphicsPipeline->getHandle()
     );
-
 }
 
 void Application::cleanup()
 {
     //Order matters!!!
-    m_vulkanSyncObjects.reset();
-    cleanupSwapChain();
+    if (m_vulkanDevice && m_vulkanDevice->getHandle() != VK_NULL_HANDLE) {
+        vkDeviceWaitIdle(m_vulkanDevice->getHandle());
+    }
+
+    m_vulkanSyncObjects.reset(); 
+    cleanupSwapChain(); 
+    m_vulkanSwapChain.reset();
+
+    m_retiredSwapChains.clear();
+    
+    // Clean up global shader modules
+    m_globalFragShaderModule.reset();
+    m_globalVertShaderModule.reset();
+
     m_vulkanDevice.reset();
     m_vulkanSurface.reset();
     m_vulkanDebugMessenger.reset();
@@ -132,10 +186,9 @@ void Application::cleanup()
 
 void Application::cleanupSwapChain()
 {
-    m_vulkanCommandBuffers.reset();
+    m_vulkanCommandBuffers.reset(); 
     m_vulkanFramebuffer.reset();
     m_vulkanGraphicsPipeline.reset();
-    m_vulkanSwapChain.reset();
 }
 
 void Application::drawFrame()
@@ -149,22 +202,21 @@ void Application::drawFrame()
         m_vulkanSwapChain->getHandle(),
         UINT64_MAX, 
         m_vulkanSyncObjects->getImageAvailableSemaphore(m_currentFrame),
-        VK_NULL_HANDLE,
+        VK_NULL_HANDLE, 
         &imageIndex);
 
     if (result == VK_ERROR_OUT_OF_DATE_KHR) {
         recreateSwapChain();
-        return;
+        return; 
     } else if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR) {
         throw std::runtime_error("failed to acquire swap chain image!");
     }
 
     vkResetFences(m_vulkanDevice->getHandle(), 1, &currentFrameFence);
 
-    vkResetCommandBuffer(m_vulkanCommandBuffers->getHandle(m_currentFrame), 0);
+    vkResetCommandBuffer(m_vulkanCommandBuffers->getHandle(m_currentFrame), 0); 
     m_vulkanCommandBuffers->recordCommandBuffer(m_currentFrame, imageIndex);
 
-    // ... (submitInfo setup) ...
     VkSubmitInfo submitInfo{};
     submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;
 
@@ -185,7 +237,7 @@ void Application::drawFrame()
     {
         throw std::runtime_error("failed to submit draw command buffer!");
     }
-    // ... (presentInfo setup) ...
+    
     VkPresentInfoKHR presentInfo{};
     presentInfo.sType = VK_STRUCTURE_TYPE_PRESENT_INFO_KHR;
     presentInfo.waitSemaphoreCount = 1;
@@ -199,7 +251,6 @@ void Application::drawFrame()
     
     result = vkQueuePresentKHR(m_vulkanDevice->getPresentQueue(), &presentInfo);
 
-    // Use the Window's wasResized() method
     bool windowWasResized = m_window->wasResized();
 
     if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR || windowWasResized) {

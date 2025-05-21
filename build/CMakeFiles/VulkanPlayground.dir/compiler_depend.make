@@ -877,7 +877,6 @@ CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_framebuffers.cpp.o:
 
 CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.o: /home/clockhandle/Vulkan_Playground/src/Graphics\ Renderer/vulkan_graphics_pipeline.cpp \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_graphics_pipeline.h \
-  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_shader_module.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -2553,24 +2552,9 @@ CMakeFiles/VulkanPlayground.dir/src/application.cpp.o: /home/clockhandle/Vulkan_
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
 CMakeFiles/VulkanPlayground.dir/src/main.cpp.o: /home/clockhandle/Vulkan_Playground/src/main.cpp \
-  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_command_buffers.h \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_config.h \
-  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_debug_messenger.h \
-  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_device.h \
-  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_framebuffers.h \
-  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_graphics_pipeline.h \
-  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_instance.h \
-  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_physical_device.h \
   /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_shader_module.h \
-  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_surface.h \
-  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_swap_chain.h \
-  /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_sync_objects.h \
   /home/clockhandle/Vulkan_Playground/include/application.h \
-  /home/clockhandle/Vulkan_Playground/include/window.h \
-  /usr/include/GL/gl.h \
-  /usr/include/GL/glext.h \
-  /usr/include/GLFW/glfw3.h \
-  /usr/include/KHR/khrplatform.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -2593,7 +2577,6 @@ CMakeFiles/VulkanPlayground.dir/src/main.cpp.o: /home/clockhandle/Vulkan_Playgro
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
-  /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
@@ -2650,10 +2633,8 @@ CMakeFiles/VulkanPlayground.dir/src/main.cpp.o: /home/clockhandle/Vulkan_Playgro
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cstddef \
-  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
-  /usr/include/c++/13/cstring \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -2673,7 +2654,6 @@ CMakeFiles/VulkanPlayground.dir/src/main.cpp.o: /home/clockhandle/Vulkan_Playgro
   /usr/include/c++/13/istream \
   /usr/include/c++/13/memory \
   /usr/include/c++/13/new \
-  /usr/include/c++/13/optional \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_memory_defs.h \
@@ -2700,8 +2680,6 @@ CMakeFiles/VulkanPlayground.dir/src/main.cpp.o: /home/clockhandle/Vulkan_Playgro
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/vk_video/vulkan_video_codec_av1std.h \
   /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
@@ -3074,10 +3052,6 @@ CMakeFiles/VulkanPlayground.dir/src/window.cpp.o: /home/clockhandle/Vulkan_Playg
 
 /usr/include/GL/glext.h:
 
-/home/clockhandle/Vulkan_Playground/src/Graphics\ Renderer/vulkan_shader_module.cpp:
-
-/usr/include/c++/13/clocale:
-
 /usr/include/c++/13/cerrno:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
@@ -3229,6 +3203,10 @@ CMakeFiles/VulkanPlayground.dir/src/window.cpp.o: /home/clockhandle/Vulkan_Playg
 /usr/include/c++/13/bits/localefwd.h:
 
 /usr/include/c++/13/bits/exception.h:
+
+/home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_shader_module.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
@@ -3506,10 +3484,6 @@ CMakeFiles/VulkanPlayground.dir/src/window.cpp.o: /home/clockhandle/Vulkan_Playg
 
 /home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_graphics_pipeline.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/home/clockhandle/Vulkan_Playground/include/Graphics\ Renderer/vulkan_shader_module.h:
-
 /usr/include/c++/13/backward/auto_ptr.h:
 
 /usr/include/wchar.h:
@@ -3527,3 +3501,7 @@ CMakeFiles/VulkanPlayground.dir/src/window.cpp.o: /home/clockhandle/Vulkan_Playg
 /usr/include/c++/13/bits/stl_multiset.h:
 
 /home/clockhandle/Vulkan_Playground/src/Graphics\ Renderer/vulkan_physical_device.cpp:
+
+/usr/include/c++/13/clocale:
+
+/home/clockhandle/Vulkan_Playground/src/Graphics\ Renderer/vulkan_shader_module.cpp:

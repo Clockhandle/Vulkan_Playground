@@ -1,16 +1,28 @@
 #include "Graphics Renderer/vulkan_graphics_pipeline.h"
-#include "Graphics Renderer/vulkan_shader_module.h" 
+// VulkanShaderModule.h is no longer needed here for creating modules, only if you were to use its type.
+// #include "Graphics Renderer/vulkan_shader_module.h" 
 #include <stdexcept>
 
-VulkanGraphicsPipeline::VulkanGraphicsPipeline(VkDevice device, VkFormat swapChainImageFormat, VkExtent2D swapChainExtent)
+VulkanGraphicsPipeline::VulkanGraphicsPipeline(
+    VkDevice device, 
+    VkFormat swapChainImageFormat, 
+    VkExtent2D swapChainExtent,
+    VkShaderModule vertShaderModuleHandle, // Parameter name updated for clarity
+    VkShaderModule fragShaderModuleHandle  // Parameter name updated for clarity
+)
     :
     m_device(device),
     m_swapChainImageFormat(swapChainImageFormat),
     m_swapChainExtent(swapChainExtent), 
+    m_vertModuleHandle(vertShaderModuleHandle), // Store the passed handle
+    m_fragModuleHandle(fragShaderModuleHandle), // Store the passed handle
     m_graphicsPipeline(VK_NULL_HANDLE),
     m_pipelineLayout(VK_NULL_HANDLE),
     m_renderPass(VK_NULL_HANDLE)      
 {   
+    if (m_vertModuleHandle == VK_NULL_HANDLE || m_fragModuleHandle == VK_NULL_HANDLE) {
+        throw std::runtime_error("Provided shader module handles cannot be VK_NULL_HANDLE");
+    }
     createRenderPass();         
     createGraphicsPipeline();   
 }
@@ -29,6 +41,7 @@ VulkanGraphicsPipeline::~VulkanGraphicsPipeline()
     {
         vkDestroyRenderPass(m_device, m_renderPass, nullptr);
     }    
+    // Shader modules are not owned, so no destruction here
 }
 
 void VulkanGraphicsPipeline::createRenderPass() 
@@ -41,7 +54,7 @@ void VulkanGraphicsPipeline::createRenderPass()
     colorAttachment.stencilLoadOp = VK_ATTACHMENT_LOAD_OP_DONT_CARE;
     colorAttachment.stencilStoreOp = VK_ATTACHMENT_STORE_OP_DONT_CARE;
     colorAttachment.initialLayout = VK_IMAGE_LAYOUT_UNDEFINED;
-    colorAttachment.finalLayout = VK_IMAGE_LAYOUT_PRESENT_SRC_KHR; // Or VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL if not presenting directly
+    colorAttachment.finalLayout = VK_IMAGE_LAYOUT_PRESENT_SRC_KHR;
 
     VkAttachmentReference colorAttachmentRef{};
     colorAttachmentRef.attachment = 0; 
@@ -51,7 +64,6 @@ void VulkanGraphicsPipeline::createRenderPass()
     subpass.pipelineBindPoint = VK_PIPELINE_BIND_POINT_GRAPHICS;
     subpass.colorAttachmentCount = 1;
     subpass.pColorAttachments = &colorAttachmentRef;
-    // subpass.pDepthStencilAttachment = nullptr; // If you add depth
 
     VkSubpassDependency dependency{};
     dependency.srcSubpass = VK_SUBPASS_EXTERNAL;
@@ -78,11 +90,12 @@ void VulkanGraphicsPipeline::createRenderPass()
 
 void VulkanGraphicsPipeline::createGraphicsPipeline()
 {
+    // Shader modules are now passed in and stored as m_vertModuleHandle and m_fragModuleHandle
+    // No need to create VulkanShaderModule unique_ptrs here:
+    // m_vertShaderModule = std::make_unique<VulkanShaderModule>(m_device, "shaders/shader.vert.spv");
+    // m_fragShaderModule = std::make_unique<VulkanShaderModule>(m_device, "shaders/shader.frag.spv"); 
 
-    m_vertShaderModule = std::make_unique<VulkanShaderModule>(m_device, "shaders/shader.vert.spv");
-    m_fragShaderModule = std::make_unique<VulkanShaderModule>(m_device, "shaders/shader.frag.spv"); 
-
-    auto shaderStages = createShaderStages();
+    auto shaderStages = createShaderStages(); // This will use the stored handles
 
     VkPipelineVertexInputStateCreateInfo vertexInputInfo = configureVertexInput();
     VkPipelineInputAssemblyStateCreateInfo inputAssembly = configureInputAssembly();
@@ -90,7 +103,7 @@ void VulkanGraphicsPipeline::createGraphicsPipeline()
     VkPipelineRasterizationStateCreateInfo rasterizer = configureRasterizationState();
     VkPipelineMultisampleStateCreateInfo multisampling = configureMultisampleState();
 
-    VkPipelineColorBlendAttachmentState colorBlendAttachmentState; 
+    VkPipelineColorBlendAttachmentState colorBlendAttachmentState{}; // Renamed to avoid conflict
     VkPipelineColorBlendStateCreateInfo colorBlending = configureColorBlendState(colorBlendAttachmentState); 
 
     VkPipelineLayoutCreateInfo pipelineLayoutInfo = configurePipelineLayout();
@@ -140,22 +153,21 @@ void VulkanGraphicsPipeline::createGraphicsPipeline()
 
 std::vector<VkPipelineShaderStageCreateInfo> VulkanGraphicsPipeline::createShaderStages()
 {
-
     VkPipelineShaderStageCreateInfo vertShaderStageInfo{};
     vertShaderStageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
     vertShaderStageInfo.stage = VK_SHADER_STAGE_VERTEX_BIT;
-    vertShaderStageInfo.module = m_vertShaderModule->getHandle();
+    vertShaderStageInfo.module = m_vertModuleHandle; // Use stored handle
     vertShaderStageInfo.pName = "main"; 
 
     VkPipelineShaderStageCreateInfo fragShaderStageInfo{};
     fragShaderStageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
     fragShaderStageInfo.stage = VK_SHADER_STAGE_FRAGMENT_BIT;
-    fragShaderStageInfo.module = m_fragShaderModule->getHandle();
+    fragShaderStageInfo.module = m_fragModuleHandle; // Use stored handle
     fragShaderStageInfo.pName = "main"; 
 
     return {vertShaderStageInfo, fragShaderStageInfo};
 }
-
+// ... (rest of the helper functions: configureVertexInput, etc. remain the same) ...
 VkPipelineVertexInputStateCreateInfo VulkanGraphicsPipeline::configureVertexInput()
 {
     VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
@@ -180,13 +192,10 @@ VkPipelineViewportStateCreateInfo VulkanGraphicsPipeline::configureViewportState
 {
     VkPipelineViewportStateCreateInfo viewportStateInfo{};
     viewportStateInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
-    // Counts must be set even if dynamic. pViewports/pScissors are ignored if dynamic.
     viewportStateInfo.viewportCount = 1;
     viewportStateInfo.pViewports = nullptr; 
     viewportStateInfo.scissorCount = 1;
     viewportStateInfo.pScissors = nullptr;
-    // If not dynamic, you would define VkViewport/VkRect2D here using m_swapChainExtent
-    // and assign their pointers to pViewports/pScissors.
     return viewportStateInfo;
 }
 
@@ -199,11 +208,8 @@ VkPipelineRasterizationStateCreateInfo VulkanGraphicsPipeline::configureRasteriz
     rasterizerInfo.polygonMode = VK_POLYGON_MODE_FILL;  
     rasterizerInfo.lineWidth = 1.0f;
     rasterizerInfo.cullMode = VK_CULL_MODE_BACK_BIT;
-    rasterizerInfo.frontFace = VK_FRONT_FACE_CLOCKWISE; // Or VK_FRONT_FACE_COUNTER_CLOCKWISE
+    rasterizerInfo.frontFace = VK_FRONT_FACE_CLOCKWISE; 
     rasterizerInfo.depthBiasEnable = VK_FALSE;
-    // rasterizerInfo.depthBiasConstantFactor = 0.0f; // Unused if depthBiasEnable is VK_FALSE
-    // rasterizerInfo.depthBiasClamp = 0.0f;          // Unused
-    // rasterizerInfo.depthBiasSlopeFactor = 0.0f;    // Unused
     return rasterizerInfo;
 }
 
@@ -213,22 +219,17 @@ VkPipelineMultisampleStateCreateInfo VulkanGraphicsPipeline::configureMultisampl
     multisampleInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
     multisampleInfo.sampleShadingEnable = VK_FALSE; 
     multisampleInfo.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT; 
-    // multisampleInfo.minSampleShading = 1.0f;     // Unused if sampleShadingEnable is VK_FALSE
-    // multisampleInfo.pSampleMask = nullptr;       // Optional
-    // multisampleInfo.alphaToCoverageEnable = VK_FALSE; // Optional
-    // multisampleInfo.alphaToOneEnable = VK_FALSE;      // Optional
     return multisampleInfo;
 }
 
 VkPipelineColorBlendStateCreateInfo VulkanGraphicsPipeline::configureColorBlendState(
-    VkPipelineColorBlendAttachmentState& colorBlendAttachment
+    VkPipelineColorBlendAttachmentState& colorBlendAttachment // Parameter name kept
 ) {
     colorBlendAttachment.colorWriteMask = VK_COLOR_COMPONENT_R_BIT 
                                           | VK_COLOR_COMPONENT_G_BIT
                                           | VK_COLOR_COMPONENT_B_BIT
                                           | VK_COLOR_COMPONENT_A_BIT;
-    colorBlendAttachment.blendEnable = VK_FALSE; // Default to no blending
-    // If blendEnable were VK_TRUE, these would matter:
+    colorBlendAttachment.blendEnable = VK_FALSE; 
     colorBlendAttachment.srcColorBlendFactor = VK_BLEND_FACTOR_ONE; 
     colorBlendAttachment.dstColorBlendFactor = VK_BLEND_FACTOR_ZERO;
     colorBlendAttachment.colorBlendOp = VK_BLEND_OP_ADD;

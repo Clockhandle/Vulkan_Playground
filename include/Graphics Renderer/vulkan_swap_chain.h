@@ -8,7 +8,7 @@
 class VulkanSwapChain
 {
 public:
-    VulkanSwapChain(VkDevice device, const VulkanPhysicalDevice& vulkanPhysicalDevice, VkSurfaceKHR surface, GLFWwindow* window);
+    VulkanSwapChain(VkDevice device, const VulkanPhysicalDevice& vulkanPhysicalDevice, VkSurfaceKHR surface, GLFWwindow* window, VkSwapchainKHR oldSwapChain = VK_NULL_HANDLE);
     ~VulkanSwapChain();
 
     VkSwapchainKHR getHandle() const;
@@ -16,7 +16,7 @@ public:
     VkExtent2D getExtent() const;
     const std::vector<VkImageView>& getImageViews() const;
 private:
-    void createSwapChain(const VulkanPhysicalDevice& vulkanPhysicalDevice);
+    void createSwapChain(const VulkanPhysicalDevice& vulkanPhysicalDevice, VkSwapchainKHR oldSwapChain);
     void createImageViews();
     VkSurfaceFormatKHR chooseSwapSurfaceFormat(const std::vector<VkSurfaceFormatKHR>& availableFormats);
     VkPresentModeKHR chooseSwapSurfacePresentMode(const std::vector<VkPresentModeKHR>& availablePresentModes);
