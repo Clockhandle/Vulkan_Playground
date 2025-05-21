@@ -1,21 +1,19 @@
 #include "Graphics Renderer/vulkan_graphics_pipeline.h"
-// VulkanShaderModule.h is no longer needed here for creating modules, only if you were to use its type.
-// #include "Graphics Renderer/vulkan_shader_module.h" 
 #include <stdexcept>
 
 VulkanGraphicsPipeline::VulkanGraphicsPipeline(
     VkDevice device, 
     VkFormat swapChainImageFormat, 
     VkExtent2D swapChainExtent,
-    VkShaderModule vertShaderModuleHandle, // Parameter name updated for clarity
-    VkShaderModule fragShaderModuleHandle  // Parameter name updated for clarity
+    VkShaderModule vertShaderModuleHandle, 
+    VkShaderModule fragShaderModuleHandle  
 )
     :
     m_device(device),
     m_swapChainImageFormat(swapChainImageFormat),
     m_swapChainExtent(swapChainExtent), 
-    m_vertModuleHandle(vertShaderModuleHandle), // Store the passed handle
-    m_fragModuleHandle(fragShaderModuleHandle), // Store the passed handle
+    m_vertModuleHandle(vertShaderModuleHandle),
+    m_fragModuleHandle(fragShaderModuleHandle),
     m_graphicsPipeline(VK_NULL_HANDLE),
     m_pipelineLayout(VK_NULL_HANDLE),
     m_renderPass(VK_NULL_HANDLE)      
@@ -41,7 +39,6 @@ VulkanGraphicsPipeline::~VulkanGraphicsPipeline()
     {
         vkDestroyRenderPass(m_device, m_renderPass, nullptr);
     }    
-    // Shader modules are not owned, so no destruction here
 }
 
 void VulkanGraphicsPipeline::createRenderPass() 
@@ -90,12 +87,7 @@ void VulkanGraphicsPipeline::createRenderPass()
 
 void VulkanGraphicsPipeline::createGraphicsPipeline()
 {
-    // Shader modules are now passed in and stored as m_vertModuleHandle and m_fragModuleHandle
-    // No need to create VulkanShaderModule unique_ptrs here:
-    // m_vertShaderModule = std::make_unique<VulkanShaderModule>(m_device, "shaders/shader.vert.spv");
-    // m_fragShaderModule = std::make_unique<VulkanShaderModule>(m_device, "shaders/shader.frag.spv"); 
-
-    auto shaderStages = createShaderStages(); // This will use the stored handles
+    auto shaderStages = createShaderStages();
 
     VkPipelineVertexInputStateCreateInfo vertexInputInfo = configureVertexInput();
     VkPipelineInputAssemblyStateCreateInfo inputAssembly = configureInputAssembly();
@@ -103,7 +95,7 @@ void VulkanGraphicsPipeline::createGraphicsPipeline()
     VkPipelineRasterizationStateCreateInfo rasterizer = configureRasterizationState();
     VkPipelineMultisampleStateCreateInfo multisampling = configureMultisampleState();
 
-    VkPipelineColorBlendAttachmentState colorBlendAttachmentState{}; // Renamed to avoid conflict
+    VkPipelineColorBlendAttachmentState colorBlendAttachmentState{};
     VkPipelineColorBlendStateCreateInfo colorBlending = configureColorBlendState(colorBlendAttachmentState); 
 
     VkPipelineLayoutCreateInfo pipelineLayoutInfo = configurePipelineLayout();
@@ -167,7 +159,7 @@ std::vector<VkPipelineShaderStageCreateInfo> VulkanGraphicsPipeline::createShade
 
     return {vertShaderStageInfo, fragShaderStageInfo};
 }
-// ... (rest of the helper functions: configureVertexInput, etc. remain the same) ...
+
 VkPipelineVertexInputStateCreateInfo VulkanGraphicsPipeline::configureVertexInput()
 {
     VkPipelineVertexInputStateCreateInfo vertexInputInfo{};

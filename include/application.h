@@ -3,10 +3,9 @@
 
 #include <memory>
 #include <iostream>
-#include <vector> // Was missing, but likely needed by other headers
-#include <vulkan/vulkan.h> // For VkFormat etc.
+#include <vector> 
+#include <vulkan/vulkan.h>
 
-// Forward declarations for Vulkan wrapper classes
 class Window;
 class VulkanInstance;
 class VulkanDebugMessenger;
@@ -18,10 +17,10 @@ class VulkanGraphicsPipeline;
 class VulkanFramebuffer;
 class VulkanCommandBuffers;
 class VulkanSyncObjects;
-class VulkanShaderModule; // Forward declare or include
+class VulkanShaderModule; 
 
-#include "Graphics Renderer/vulkan_config.h" // For MAX_FRAMES_IN_FLIGHT, WINDOW_WIDTH, WINDOW_HEIGHT
-#include "Graphics Renderer/vulkan_shader_module.h" // Include for std::unique_ptr<VulkanShaderModule>
+#include "Graphics Renderer/vulkan_config.h" 
+#include "Graphics Renderer/vulkan_shader_module.h"
 
 class Application {
 public:
@@ -50,7 +49,6 @@ private:
     std::unique_ptr<VulkanCommandBuffers> m_vulkanCommandBuffers;
     std::unique_ptr<VulkanSyncObjects> m_vulkanSyncObjects;
 
-    // Cached shader modules
     std::unique_ptr<VulkanShaderModule> m_globalVertShaderModule;
     std::unique_ptr<VulkanShaderModule> m_globalFragShaderModule;
 
