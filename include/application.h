@@ -27,7 +27,9 @@ private:
     void initWindow();
     void initVulkan();
     void mainLoop();
+    void recreateSwapChain();
     void cleanup();
+    void cleanupSwapChain();
     void drawFrame();
 private:
     std::unique_ptr<Window> m_window;
