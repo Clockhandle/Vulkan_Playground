@@ -77,7 +77,6 @@ void VulkanSwapChain::createSwapChain(const VulkanPhysicalDevice& vulkanPhysical
     createInfo.presentMode = presentMode;
     createInfo.clipped = VK_TRUE;
     
-    // Use the oldSwapchain handle
     createInfo.oldSwapchain = oldSwapchain; 
 
     if(vkCreateSwapchainKHR(m_device, &createInfo, nullptr, &m_swapChain) != VK_SUCCESS)
@@ -85,7 +84,6 @@ void VulkanSwapChain::createSwapChain(const VulkanPhysicalDevice& vulkanPhysical
         throw std::runtime_error("failed to create swap chain!");
     }
 
-    // Retrieve swap chain images
     vkGetSwapchainImagesKHR(m_device, m_swapChain, &imageCount, nullptr);
     m_swapChainImages.resize(imageCount);
     vkGetSwapchainImagesKHR(m_device, m_swapChain, &imageCount, m_swapChainImages.data());
