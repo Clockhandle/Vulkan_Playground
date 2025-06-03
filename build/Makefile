@@ -142,367 +142,341 @@ VulkanPlayground/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/build
 .PHONY : VulkanPlayground/fast
 
-#=============================================================================
-# Target rules for targets named run
-
-# Build rule for target.
-run: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run
-.PHONY : run
-
-# fast build rule for target.
-run/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
-.PHONY : run/fast
-
-#=============================================================================
-# Target rules for targets named clean_build
-
-# Build rule for target.
-clean_build: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean_build
-.PHONY : clean_build
-
-# fast build rule for target.
-clean_build/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_build.dir/build.make CMakeFiles/clean_build.dir/build
-.PHONY : clean_build/fast
-
-src/Graphics_Renderer/vulkan_command_buffers.o: src/Graphics_Renderer/vulkan_command_buffers.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_command_buffers.o
+application/application.o: application/application.cpp.o
+.PHONY : application/application.o
 
 # target to build an object file
-src/Graphics_Renderer/vulkan_command_buffers.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_command_buffers.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_command_buffers.cpp.o
+application/application.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/application/application.cpp.o
+.PHONY : application/application.cpp.o
 
-src/Graphics_Renderer/vulkan_command_buffers.i: src/Graphics_Renderer/vulkan_command_buffers.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_command_buffers.i
+application/application.i: application/application.cpp.i
+.PHONY : application/application.i
 
 # target to preprocess a source file
-src/Graphics_Renderer/vulkan_command_buffers.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_command_buffers.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_command_buffers.cpp.i
+application/application.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/application/application.cpp.i
+.PHONY : application/application.cpp.i
 
-src/Graphics_Renderer/vulkan_command_buffers.s: src/Graphics_Renderer/vulkan_command_buffers.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_command_buffers.s
+application/application.s: application/application.cpp.s
+.PHONY : application/application.s
 
 # target to generate assembly for a file
-src/Graphics_Renderer/vulkan_command_buffers.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_command_buffers.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_command_buffers.cpp.s
+application/application.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/application/application.cpp.s
+.PHONY : application/application.cpp.s
 
-src/Graphics_Renderer/vulkan_debug_messenger.o: src/Graphics_Renderer/vulkan_debug_messenger.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_debug_messenger.o
+engine/API/Vulkan/vulkan_command_buffers.o: engine/API/Vulkan/vulkan_command_buffers.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_command_buffers.o
 
 # target to build an object file
-src/Graphics_Renderer/vulkan_debug_messenger.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_debug_messenger.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_debug_messenger.cpp.o
+engine/API/Vulkan/vulkan_command_buffers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_command_buffers.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_command_buffers.cpp.o
 
-src/Graphics_Renderer/vulkan_debug_messenger.i: src/Graphics_Renderer/vulkan_debug_messenger.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_debug_messenger.i
+engine/API/Vulkan/vulkan_command_buffers.i: engine/API/Vulkan/vulkan_command_buffers.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_command_buffers.i
 
 # target to preprocess a source file
-src/Graphics_Renderer/vulkan_debug_messenger.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_debug_messenger.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_debug_messenger.cpp.i
+engine/API/Vulkan/vulkan_command_buffers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_command_buffers.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_command_buffers.cpp.i
 
-src/Graphics_Renderer/vulkan_debug_messenger.s: src/Graphics_Renderer/vulkan_debug_messenger.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_debug_messenger.s
+engine/API/Vulkan/vulkan_command_buffers.s: engine/API/Vulkan/vulkan_command_buffers.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_command_buffers.s
 
 # target to generate assembly for a file
-src/Graphics_Renderer/vulkan_debug_messenger.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_debug_messenger.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_debug_messenger.cpp.s
+engine/API/Vulkan/vulkan_command_buffers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_command_buffers.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_command_buffers.cpp.s
 
-src/Graphics_Renderer/vulkan_device.o: src/Graphics_Renderer/vulkan_device.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_device.o
+engine/API/Vulkan/vulkan_debug_messenger.o: engine/API/Vulkan/vulkan_debug_messenger.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_debug_messenger.o
 
 # target to build an object file
-src/Graphics_Renderer/vulkan_device.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_device.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_device.cpp.o
+engine/API/Vulkan/vulkan_debug_messenger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_debug_messenger.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_debug_messenger.cpp.o
 
-src/Graphics_Renderer/vulkan_device.i: src/Graphics_Renderer/vulkan_device.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_device.i
+engine/API/Vulkan/vulkan_debug_messenger.i: engine/API/Vulkan/vulkan_debug_messenger.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_debug_messenger.i
 
 # target to preprocess a source file
-src/Graphics_Renderer/vulkan_device.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_device.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_device.cpp.i
+engine/API/Vulkan/vulkan_debug_messenger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_debug_messenger.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_debug_messenger.cpp.i
 
-src/Graphics_Renderer/vulkan_device.s: src/Graphics_Renderer/vulkan_device.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_device.s
+engine/API/Vulkan/vulkan_debug_messenger.s: engine/API/Vulkan/vulkan_debug_messenger.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_debug_messenger.s
 
 # target to generate assembly for a file
-src/Graphics_Renderer/vulkan_device.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_device.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_device.cpp.s
+engine/API/Vulkan/vulkan_debug_messenger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_debug_messenger.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_debug_messenger.cpp.s
 
-src/Graphics_Renderer/vulkan_framebuffers.o: src/Graphics_Renderer/vulkan_framebuffers.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_framebuffers.o
+engine/API/Vulkan/vulkan_device.o: engine/API/Vulkan/vulkan_device.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_device.o
 
 # target to build an object file
-src/Graphics_Renderer/vulkan_framebuffers.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_framebuffers.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_framebuffers.cpp.o
+engine/API/Vulkan/vulkan_device.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_device.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_device.cpp.o
 
-src/Graphics_Renderer/vulkan_framebuffers.i: src/Graphics_Renderer/vulkan_framebuffers.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_framebuffers.i
+engine/API/Vulkan/vulkan_device.i: engine/API/Vulkan/vulkan_device.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_device.i
 
 # target to preprocess a source file
-src/Graphics_Renderer/vulkan_framebuffers.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_framebuffers.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_framebuffers.cpp.i
+engine/API/Vulkan/vulkan_device.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_device.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_device.cpp.i
 
-src/Graphics_Renderer/vulkan_framebuffers.s: src/Graphics_Renderer/vulkan_framebuffers.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_framebuffers.s
+engine/API/Vulkan/vulkan_device.s: engine/API/Vulkan/vulkan_device.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_device.s
 
 # target to generate assembly for a file
-src/Graphics_Renderer/vulkan_framebuffers.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_framebuffers.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_framebuffers.cpp.s
+engine/API/Vulkan/vulkan_device.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_device.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_device.cpp.s
 
-src/Graphics_Renderer/vulkan_graphics_pipeline.o: src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.o
+engine/API/Vulkan/vulkan_framebuffers.o: engine/API/Vulkan/vulkan_framebuffers.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_framebuffers.o
 
 # target to build an object file
-src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.o
+engine/API/Vulkan/vulkan_framebuffers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_framebuffers.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_framebuffers.cpp.o
 
-src/Graphics_Renderer/vulkan_graphics_pipeline.i: src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.i
+engine/API/Vulkan/vulkan_framebuffers.i: engine/API/Vulkan/vulkan_framebuffers.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_framebuffers.i
 
 # target to preprocess a source file
-src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.i
+engine/API/Vulkan/vulkan_framebuffers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_framebuffers.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_framebuffers.cpp.i
 
-src/Graphics_Renderer/vulkan_graphics_pipeline.s: src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.s
+engine/API/Vulkan/vulkan_framebuffers.s: engine/API/Vulkan/vulkan_framebuffers.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_framebuffers.s
 
 # target to generate assembly for a file
-src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_graphics_pipeline.cpp.s
+engine/API/Vulkan/vulkan_framebuffers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_framebuffers.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_framebuffers.cpp.s
 
-src/Graphics_Renderer/vulkan_instance.o: src/Graphics_Renderer/vulkan_instance.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_instance.o
+engine/API/Vulkan/vulkan_graphics_pipeline.o: engine/API/Vulkan/vulkan_graphics_pipeline.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_graphics_pipeline.o
 
 # target to build an object file
-src/Graphics_Renderer/vulkan_instance.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_instance.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_instance.cpp.o
+engine/API/Vulkan/vulkan_graphics_pipeline.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_graphics_pipeline.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_graphics_pipeline.cpp.o
 
-src/Graphics_Renderer/vulkan_instance.i: src/Graphics_Renderer/vulkan_instance.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_instance.i
+engine/API/Vulkan/vulkan_graphics_pipeline.i: engine/API/Vulkan/vulkan_graphics_pipeline.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_graphics_pipeline.i
 
 # target to preprocess a source file
-src/Graphics_Renderer/vulkan_instance.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_instance.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_instance.cpp.i
+engine/API/Vulkan/vulkan_graphics_pipeline.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_graphics_pipeline.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_graphics_pipeline.cpp.i
 
-src/Graphics_Renderer/vulkan_instance.s: src/Graphics_Renderer/vulkan_instance.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_instance.s
+engine/API/Vulkan/vulkan_graphics_pipeline.s: engine/API/Vulkan/vulkan_graphics_pipeline.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_graphics_pipeline.s
 
 # target to generate assembly for a file
-src/Graphics_Renderer/vulkan_instance.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_instance.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_instance.cpp.s
+engine/API/Vulkan/vulkan_graphics_pipeline.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_graphics_pipeline.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_graphics_pipeline.cpp.s
 
-src/Graphics_Renderer/vulkan_physical_device.o: src/Graphics_Renderer/vulkan_physical_device.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_physical_device.o
+engine/API/Vulkan/vulkan_instance.o: engine/API/Vulkan/vulkan_instance.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_instance.o
 
 # target to build an object file
-src/Graphics_Renderer/vulkan_physical_device.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_physical_device.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_physical_device.cpp.o
+engine/API/Vulkan/vulkan_instance.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_instance.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_instance.cpp.o
 
-src/Graphics_Renderer/vulkan_physical_device.i: src/Graphics_Renderer/vulkan_physical_device.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_physical_device.i
+engine/API/Vulkan/vulkan_instance.i: engine/API/Vulkan/vulkan_instance.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_instance.i
 
 # target to preprocess a source file
-src/Graphics_Renderer/vulkan_physical_device.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_physical_device.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_physical_device.cpp.i
+engine/API/Vulkan/vulkan_instance.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_instance.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_instance.cpp.i
 
-src/Graphics_Renderer/vulkan_physical_device.s: src/Graphics_Renderer/vulkan_physical_device.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_physical_device.s
+engine/API/Vulkan/vulkan_instance.s: engine/API/Vulkan/vulkan_instance.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_instance.s
 
 # target to generate assembly for a file
-src/Graphics_Renderer/vulkan_physical_device.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_physical_device.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_physical_device.cpp.s
+engine/API/Vulkan/vulkan_instance.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_instance.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_instance.cpp.s
 
-src/Graphics_Renderer/vulkan_shader_module.o: src/Graphics_Renderer/vulkan_shader_module.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_shader_module.o
+engine/API/Vulkan/vulkan_physical_device.o: engine/API/Vulkan/vulkan_physical_device.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_physical_device.o
 
 # target to build an object file
-src/Graphics_Renderer/vulkan_shader_module.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_shader_module.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_shader_module.cpp.o
+engine/API/Vulkan/vulkan_physical_device.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_physical_device.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_physical_device.cpp.o
 
-src/Graphics_Renderer/vulkan_shader_module.i: src/Graphics_Renderer/vulkan_shader_module.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_shader_module.i
+engine/API/Vulkan/vulkan_physical_device.i: engine/API/Vulkan/vulkan_physical_device.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_physical_device.i
 
 # target to preprocess a source file
-src/Graphics_Renderer/vulkan_shader_module.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_shader_module.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_shader_module.cpp.i
+engine/API/Vulkan/vulkan_physical_device.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_physical_device.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_physical_device.cpp.i
 
-src/Graphics_Renderer/vulkan_shader_module.s: src/Graphics_Renderer/vulkan_shader_module.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_shader_module.s
+engine/API/Vulkan/vulkan_physical_device.s: engine/API/Vulkan/vulkan_physical_device.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_physical_device.s
 
 # target to generate assembly for a file
-src/Graphics_Renderer/vulkan_shader_module.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_shader_module.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_shader_module.cpp.s
+engine/API/Vulkan/vulkan_physical_device.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_physical_device.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_physical_device.cpp.s
 
-src/Graphics_Renderer/vulkan_surface.o: src/Graphics_Renderer/vulkan_surface.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_surface.o
+engine/API/Vulkan/vulkan_shader_module.o: engine/API/Vulkan/vulkan_shader_module.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_shader_module.o
 
 # target to build an object file
-src/Graphics_Renderer/vulkan_surface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_surface.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_surface.cpp.o
+engine/API/Vulkan/vulkan_shader_module.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_shader_module.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_shader_module.cpp.o
 
-src/Graphics_Renderer/vulkan_surface.i: src/Graphics_Renderer/vulkan_surface.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_surface.i
+engine/API/Vulkan/vulkan_shader_module.i: engine/API/Vulkan/vulkan_shader_module.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_shader_module.i
 
 # target to preprocess a source file
-src/Graphics_Renderer/vulkan_surface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_surface.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_surface.cpp.i
+engine/API/Vulkan/vulkan_shader_module.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_shader_module.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_shader_module.cpp.i
 
-src/Graphics_Renderer/vulkan_surface.s: src/Graphics_Renderer/vulkan_surface.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_surface.s
+engine/API/Vulkan/vulkan_shader_module.s: engine/API/Vulkan/vulkan_shader_module.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_shader_module.s
 
 # target to generate assembly for a file
-src/Graphics_Renderer/vulkan_surface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_surface.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_surface.cpp.s
+engine/API/Vulkan/vulkan_shader_module.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_shader_module.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_shader_module.cpp.s
 
-src/Graphics_Renderer/vulkan_swap_chain.o: src/Graphics_Renderer/vulkan_swap_chain.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_swap_chain.o
+engine/API/Vulkan/vulkan_surface.o: engine/API/Vulkan/vulkan_surface.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_surface.o
 
 # target to build an object file
-src/Graphics_Renderer/vulkan_swap_chain.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_swap_chain.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_swap_chain.cpp.o
+engine/API/Vulkan/vulkan_surface.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_surface.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_surface.cpp.o
 
-src/Graphics_Renderer/vulkan_swap_chain.i: src/Graphics_Renderer/vulkan_swap_chain.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_swap_chain.i
+engine/API/Vulkan/vulkan_surface.i: engine/API/Vulkan/vulkan_surface.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_surface.i
 
 # target to preprocess a source file
-src/Graphics_Renderer/vulkan_swap_chain.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_swap_chain.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_swap_chain.cpp.i
+engine/API/Vulkan/vulkan_surface.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_surface.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_surface.cpp.i
 
-src/Graphics_Renderer/vulkan_swap_chain.s: src/Graphics_Renderer/vulkan_swap_chain.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_swap_chain.s
+engine/API/Vulkan/vulkan_surface.s: engine/API/Vulkan/vulkan_surface.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_surface.s
 
 # target to generate assembly for a file
-src/Graphics_Renderer/vulkan_swap_chain.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_swap_chain.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_swap_chain.cpp.s
+engine/API/Vulkan/vulkan_surface.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_surface.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_surface.cpp.s
 
-src/Graphics_Renderer/vulkan_sync_objects.o: src/Graphics_Renderer/vulkan_sync_objects.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_sync_objects.o
+engine/API/Vulkan/vulkan_swap_chain.o: engine/API/Vulkan/vulkan_swap_chain.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_swap_chain.o
 
 # target to build an object file
-src/Graphics_Renderer/vulkan_sync_objects.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_sync_objects.cpp.o
-.PHONY : src/Graphics_Renderer/vulkan_sync_objects.cpp.o
+engine/API/Vulkan/vulkan_swap_chain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_swap_chain.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_swap_chain.cpp.o
 
-src/Graphics_Renderer/vulkan_sync_objects.i: src/Graphics_Renderer/vulkan_sync_objects.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_sync_objects.i
+engine/API/Vulkan/vulkan_swap_chain.i: engine/API/Vulkan/vulkan_swap_chain.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_swap_chain.i
 
 # target to preprocess a source file
-src/Graphics_Renderer/vulkan_sync_objects.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_sync_objects.cpp.i
-.PHONY : src/Graphics_Renderer/vulkan_sync_objects.cpp.i
+engine/API/Vulkan/vulkan_swap_chain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_swap_chain.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_swap_chain.cpp.i
 
-src/Graphics_Renderer/vulkan_sync_objects.s: src/Graphics_Renderer/vulkan_sync_objects.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_sync_objects.s
+engine/API/Vulkan/vulkan_swap_chain.s: engine/API/Vulkan/vulkan_swap_chain.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_swap_chain.s
 
 # target to generate assembly for a file
-src/Graphics_Renderer/vulkan_sync_objects.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/Graphics_Renderer/vulkan_sync_objects.cpp.s
-.PHONY : src/Graphics_Renderer/vulkan_sync_objects.cpp.s
+engine/API/Vulkan/vulkan_swap_chain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_swap_chain.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_swap_chain.cpp.s
 
-src/application.o: src/application.cpp.o
-.PHONY : src/application.o
+engine/API/Vulkan/vulkan_sync_objects.o: engine/API/Vulkan/vulkan_sync_objects.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_sync_objects.o
 
 # target to build an object file
-src/application.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/application.cpp.o
-.PHONY : src/application.cpp.o
+engine/API/Vulkan/vulkan_sync_objects.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_sync_objects.cpp.o
+.PHONY : engine/API/Vulkan/vulkan_sync_objects.cpp.o
 
-src/application.i: src/application.cpp.i
-.PHONY : src/application.i
+engine/API/Vulkan/vulkan_sync_objects.i: engine/API/Vulkan/vulkan_sync_objects.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_sync_objects.i
 
 # target to preprocess a source file
-src/application.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/application.cpp.i
-.PHONY : src/application.cpp.i
+engine/API/Vulkan/vulkan_sync_objects.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_sync_objects.cpp.i
+.PHONY : engine/API/Vulkan/vulkan_sync_objects.cpp.i
 
-src/application.s: src/application.cpp.s
-.PHONY : src/application.s
+engine/API/Vulkan/vulkan_sync_objects.s: engine/API/Vulkan/vulkan_sync_objects.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_sync_objects.s
 
 # target to generate assembly for a file
-src/application.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/application.cpp.s
-.PHONY : src/application.cpp.s
+engine/API/Vulkan/vulkan_sync_objects.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_sync_objects.cpp.s
+.PHONY : engine/API/Vulkan/vulkan_sync_objects.cpp.s
 
-src/main.o: src/main.cpp.o
-.PHONY : src/main.o
+engine/window/window.o: engine/window/window.cpp.o
+.PHONY : engine/window/window.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+engine/window/window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o
+.PHONY : engine/window/window.cpp.o
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+engine/window/window.i: engine/window/window.cpp.i
+.PHONY : engine/window/window.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+engine/window/window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.i
+.PHONY : engine/window/window.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+engine/window/window.s: engine/window/window.cpp.s
+.PHONY : engine/window/window.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+engine/window/window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.s
+.PHONY : engine/window/window.cpp.s
 
-src/window.o: src/window.cpp.o
-.PHONY : src/window.o
+main.o: main.cpp.o
+.PHONY : main.o
 
 # target to build an object file
-src/window.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/window.cpp.o
-.PHONY : src/window.cpp.o
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-src/window.i: src/window.cpp.i
-.PHONY : src/window.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/window.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/window.cpp.i
-.PHONY : src/window.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-src/window.s: src/window.cpp.s
-.PHONY : src/window.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/window.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/src/window.cpp.s
-.PHONY : src/window.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VulkanPlayground.dir/build.make CMakeFiles/VulkanPlayground.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -513,51 +487,49 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CompileShaders"
-	@echo "... clean_build"
-	@echo "... run"
 	@echo "... VulkanPlayground"
-	@echo "... src/Graphics_Renderer/vulkan_command_buffers.o"
-	@echo "... src/Graphics_Renderer/vulkan_command_buffers.i"
-	@echo "... src/Graphics_Renderer/vulkan_command_buffers.s"
-	@echo "... src/Graphics_Renderer/vulkan_debug_messenger.o"
-	@echo "... src/Graphics_Renderer/vulkan_debug_messenger.i"
-	@echo "... src/Graphics_Renderer/vulkan_debug_messenger.s"
-	@echo "... src/Graphics_Renderer/vulkan_device.o"
-	@echo "... src/Graphics_Renderer/vulkan_device.i"
-	@echo "... src/Graphics_Renderer/vulkan_device.s"
-	@echo "... src/Graphics_Renderer/vulkan_framebuffers.o"
-	@echo "... src/Graphics_Renderer/vulkan_framebuffers.i"
-	@echo "... src/Graphics_Renderer/vulkan_framebuffers.s"
-	@echo "... src/Graphics_Renderer/vulkan_graphics_pipeline.o"
-	@echo "... src/Graphics_Renderer/vulkan_graphics_pipeline.i"
-	@echo "... src/Graphics_Renderer/vulkan_graphics_pipeline.s"
-	@echo "... src/Graphics_Renderer/vulkan_instance.o"
-	@echo "... src/Graphics_Renderer/vulkan_instance.i"
-	@echo "... src/Graphics_Renderer/vulkan_instance.s"
-	@echo "... src/Graphics_Renderer/vulkan_physical_device.o"
-	@echo "... src/Graphics_Renderer/vulkan_physical_device.i"
-	@echo "... src/Graphics_Renderer/vulkan_physical_device.s"
-	@echo "... src/Graphics_Renderer/vulkan_shader_module.o"
-	@echo "... src/Graphics_Renderer/vulkan_shader_module.i"
-	@echo "... src/Graphics_Renderer/vulkan_shader_module.s"
-	@echo "... src/Graphics_Renderer/vulkan_surface.o"
-	@echo "... src/Graphics_Renderer/vulkan_surface.i"
-	@echo "... src/Graphics_Renderer/vulkan_surface.s"
-	@echo "... src/Graphics_Renderer/vulkan_swap_chain.o"
-	@echo "... src/Graphics_Renderer/vulkan_swap_chain.i"
-	@echo "... src/Graphics_Renderer/vulkan_swap_chain.s"
-	@echo "... src/Graphics_Renderer/vulkan_sync_objects.o"
-	@echo "... src/Graphics_Renderer/vulkan_sync_objects.i"
-	@echo "... src/Graphics_Renderer/vulkan_sync_objects.s"
-	@echo "... src/application.o"
-	@echo "... src/application.i"
-	@echo "... src/application.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
-	@echo "... src/window.o"
-	@echo "... src/window.i"
-	@echo "... src/window.s"
+	@echo "... application/application.o"
+	@echo "... application/application.i"
+	@echo "... application/application.s"
+	@echo "... engine/API/Vulkan/vulkan_command_buffers.o"
+	@echo "... engine/API/Vulkan/vulkan_command_buffers.i"
+	@echo "... engine/API/Vulkan/vulkan_command_buffers.s"
+	@echo "... engine/API/Vulkan/vulkan_debug_messenger.o"
+	@echo "... engine/API/Vulkan/vulkan_debug_messenger.i"
+	@echo "... engine/API/Vulkan/vulkan_debug_messenger.s"
+	@echo "... engine/API/Vulkan/vulkan_device.o"
+	@echo "... engine/API/Vulkan/vulkan_device.i"
+	@echo "... engine/API/Vulkan/vulkan_device.s"
+	@echo "... engine/API/Vulkan/vulkan_framebuffers.o"
+	@echo "... engine/API/Vulkan/vulkan_framebuffers.i"
+	@echo "... engine/API/Vulkan/vulkan_framebuffers.s"
+	@echo "... engine/API/Vulkan/vulkan_graphics_pipeline.o"
+	@echo "... engine/API/Vulkan/vulkan_graphics_pipeline.i"
+	@echo "... engine/API/Vulkan/vulkan_graphics_pipeline.s"
+	@echo "... engine/API/Vulkan/vulkan_instance.o"
+	@echo "... engine/API/Vulkan/vulkan_instance.i"
+	@echo "... engine/API/Vulkan/vulkan_instance.s"
+	@echo "... engine/API/Vulkan/vulkan_physical_device.o"
+	@echo "... engine/API/Vulkan/vulkan_physical_device.i"
+	@echo "... engine/API/Vulkan/vulkan_physical_device.s"
+	@echo "... engine/API/Vulkan/vulkan_shader_module.o"
+	@echo "... engine/API/Vulkan/vulkan_shader_module.i"
+	@echo "... engine/API/Vulkan/vulkan_shader_module.s"
+	@echo "... engine/API/Vulkan/vulkan_surface.o"
+	@echo "... engine/API/Vulkan/vulkan_surface.i"
+	@echo "... engine/API/Vulkan/vulkan_surface.s"
+	@echo "... engine/API/Vulkan/vulkan_swap_chain.o"
+	@echo "... engine/API/Vulkan/vulkan_swap_chain.i"
+	@echo "... engine/API/Vulkan/vulkan_swap_chain.s"
+	@echo "... engine/API/Vulkan/vulkan_sync_objects.o"
+	@echo "... engine/API/Vulkan/vulkan_sync_objects.i"
+	@echo "... engine/API/Vulkan/vulkan_sync_objects.s"
+	@echo "... engine/window/window.o"
+	@echo "... engine/window/window.i"
+	@echo "... engine/window/window.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

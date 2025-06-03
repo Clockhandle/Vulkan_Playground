@@ -1,6 +1,4 @@
 /home/clockhandle/Vulkan_Playground/build/CMakeFiles/CompileShaders.dir
 /home/clockhandle/Vulkan_Playground/build/CMakeFiles/VulkanPlayground.dir
-/home/clockhandle/Vulkan_Playground/build/CMakeFiles/run.dir
-/home/clockhandle/Vulkan_Playground/build/CMakeFiles/clean_build.dir
 /home/clockhandle/Vulkan_Playground/build/CMakeFiles/edit_cache.dir
 /home/clockhandle/Vulkan_Playground/build/CMakeFiles/rebuild_cache.dir

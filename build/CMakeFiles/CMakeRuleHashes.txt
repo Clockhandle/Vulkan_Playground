@@ -2,5 +2,3 @@
 f796456316e8070075a919922b549376 /home/clockhandle/Vulkan_Playground/shaders/shader.frag.spv
 49778ef27528e2859f78958b66df6e51 /home/clockhandle/Vulkan_Playground/shaders/shader.vert.spv
 5c450c1453f204e9a191f4207b2aa265 CMakeFiles/CompileShaders
-d11dd832b83b62179dc62a39f8d438f8 CMakeFiles/clean_build
-889f29dd7d60f82958fe12901c8d017b CMakeFiles/run
