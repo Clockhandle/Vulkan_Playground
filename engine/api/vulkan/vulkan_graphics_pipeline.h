@@ -4,6 +4,7 @@
 #include <vulkan/vulkan.h>
 #include <string>
 #include <vector>
+#include <array>
 #include <memory> // For std::unique_ptr if other members need it, not for shaders anymore
 #include "renderer/vertex.h"
 // Forward declare VulkanShaderModule if its full definition isn't needed here
@@ -51,6 +52,9 @@ private:
     // Shader modules are now passed in, not owned by this class
     VkShaderModule m_vertModuleHandle; // Store the passed-in handle
     VkShaderModule m_fragModuleHandle; // Store the passed-in handle
+
+    VkVertexInputBindingDescription m_bindingDescription;
+    std::array<VkVertexInputAttributeDescription, 2> m_attributeDescriptions;
 };
 
 #endif // VULKAN_GRAPHICS_PIPELINE_H

@@ -55,6 +55,9 @@ add_custom_target(CompileShaders ALL
 set(PROJECT_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/application/application.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/engine/renderer/mesh.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/engine/api/vulkan/manager/vulkan_buffer_manager.cpp
+
 )
 
 file(GLOB ENGINE_WINDOW_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/engine/window/*.cpp")

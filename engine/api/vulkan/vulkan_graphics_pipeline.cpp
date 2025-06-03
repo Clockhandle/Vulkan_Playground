@@ -165,13 +165,13 @@ VkPipelineVertexInputStateCreateInfo VulkanGraphicsPipeline::configureVertexInpu
     VkPipelineVertexInputStateCreateInfo vertexInputInfo{};
     vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
 
-    auto bindingDescription = Vertex::getBindingDescription();
-    auto attributeDescription = Vertex::getAttributeDescription();
+    m_bindingDescription = Vertex::getBindingDescription();
+    m_attributeDescriptions = Vertex::getAttributeDescription();
 
     vertexInputInfo.vertexBindingDescriptionCount = 1;
-    vertexInputInfo.pVertexBindingDescriptions = &bindingDescription; 
-    vertexInputInfo.vertexAttributeDescriptionCount = static_cast<uint32_t>(attributeDescription.size());
-    vertexInputInfo.pVertexAttributeDescriptions = attributeDescription.data();
+    vertexInputInfo.pVertexBindingDescriptions = &m_bindingDescription; 
+    vertexInputInfo.vertexAttributeDescriptionCount = static_cast<uint32_t>(m_attributeDescriptions.size());
+    vertexInputInfo.pVertexAttributeDescriptions = m_attributeDescriptions.data();
     return vertexInputInfo;
 }
 

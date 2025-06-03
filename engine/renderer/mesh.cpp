@@ -23,3 +23,13 @@ void Mesh::setupVertexBuffer(VulkanBufferManager &bufferManager)
         throw std::runtime_error("Mesh construction failed: GPU vertex buffer could not be created.");
     }
 }
+
+const VulkanBuffer* Mesh::getVertexBuffer() const
+{
+    return m_vertexBufferGpu.get();
+}
+
+const size_t Mesh::getVertexCount() const
+{
+    return m_vertices.size();
+}

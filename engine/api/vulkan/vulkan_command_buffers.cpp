@@ -67,7 +67,7 @@ const VkCommandBuffer* VulkanCommandBuffers::getHandlePointer(uint32_t frameInde
     return &m_commandBuffers[frameIndex];
 }
 
-void VulkanCommandBuffers::recordCommandBuffer(uint32_t frameIndex, uint32_t imageIndex)
+void VulkanCommandBuffers::recordCommandBuffer(uint32_t frameIndex, uint32_t imageIndex, const Mesh* meshToDraw)
 {
     if(frameIndex >= m_commandBuffers.size())
     {
@@ -113,7 +113,14 @@ void VulkanCommandBuffers::recordCommandBuffer(uint32_t frameIndex, uint32_t ima
     scissor.extent = m_swapChainExtent;
     vkCmdSetScissor(currentCommandBuffer, 0, 1, &scissor);
 
-    vkCmdDraw(currentCommandBuffer, 3, 1, 0, 0);
+    if(meshToDraw && meshToDraw->getVertexBuffer() && meshToDraw->getVertexBuffer()->getHandle() != VK_NULL_HANDLE)
+    {
+        VkBuffer vertexBuffers[] = {meshToDraw->getVertexBuffer()->getHandle()};
+        VkDeviceSize offsets[] = {0};
+        vkCmdBindVertexBuffers(currentCommandBuffer, 0, 1, vertexBuffers, offsets);
+
+        vkCmdDraw(currentCommandBuffer, static_cast<uint32_t>(meshToDraw->getVertexCount()), 1, 0, 0);
+    }
 
     vkCmdEndRenderPass(currentCommandBuffer);
 

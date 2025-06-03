@@ -19,8 +19,8 @@
 #include "vulkan_sync_objects.h"
 #include "vulkan_config.h" 
 #include "vulkan_shader_module.h"
-#include "vulkan_buffer_manager.h"
-#include "mesh.h"
+#include "manager/vulkan_buffer_manager.h"
+#include "renderer/mesh.h"
 
 class Application {
 public:

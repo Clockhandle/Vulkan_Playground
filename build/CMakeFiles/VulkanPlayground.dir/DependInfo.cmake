@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/clockhandle/Vulkan_Playground/application/application.cpp" "CMakeFiles/VulkanPlayground.dir/application/application.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/application/application.cpp.o.d"
+  "/home/clockhandle/Vulkan_Playground/engine/api/vulkan/manager/vulkan_buffer_manager.cpp" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.o.d"
+  "/home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_buffer.cpp" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.o.d"
   "/home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_command_buffers.cpp" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.o.d"
   "/home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_debug_messenger.cpp" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o.d"
   "/home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_device.cpp" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o.d"
@@ -20,6 +22,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_surface.cpp" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_surface.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_surface.cpp.o.d"
   "/home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_swap_chain.cpp" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_swap_chain.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_swap_chain.cpp.o.d"
   "/home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_sync_objects.cpp" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_sync_objects.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_sync_objects.cpp.o.d"
+  "/home/clockhandle/Vulkan_Playground/engine/renderer/mesh.cpp" "CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.o.d"
   "/home/clockhandle/Vulkan_Playground/engine/window/window.cpp" "CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o.d"
   "/home/clockhandle/Vulkan_Playground/main.cpp" "CMakeFiles/VulkanPlayground.dir/main.cpp.o" "gcc" "CMakeFiles/VulkanPlayground.dir/main.cpp.o.d"
   )

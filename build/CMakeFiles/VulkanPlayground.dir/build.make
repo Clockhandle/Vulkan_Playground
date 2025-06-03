@@ -97,10 +97,38 @@ CMakeFiles/VulkanPlayground.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VulkanPlayground.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clockhandle/Vulkan_Playground/main.cpp -o CMakeFiles/VulkanPlayground.dir/main.cpp.s
 
+CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
+CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.o: /home/clockhandle/Vulkan_Playground/engine/renderer/mesh.cpp
+CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/renderer/mesh.cpp
+
+CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clockhandle/Vulkan_Playground/engine/renderer/mesh.cpp > CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.i
+
+CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clockhandle/Vulkan_Playground/engine/renderer/mesh.cpp -o CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.s
+
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/manager/vulkan_buffer_manager.cpp
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/manager/vulkan_buffer_manager.cpp
+
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clockhandle/Vulkan_Playground/engine/api/vulkan/manager/vulkan_buffer_manager.cpp > CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.i
+
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clockhandle/Vulkan_Playground/engine/api/vulkan/manager/vulkan_buffer_manager.cpp -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.s
+
 CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
 CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o: /home/clockhandle/Vulkan_Playground/engine/window/window.cpp
 CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/window/window.cpp
 
 CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.i: cmake_force
@@ -111,10 +139,24 @@ CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clockhandle/Vulkan_Playground/engine/window/window.cpp -o CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.s
 
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_buffer.cpp
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_buffer.cpp
+
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_buffer.cpp > CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.i
+
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_buffer.cpp -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.s
+
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_command_buffers.cpp
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_command_buffers.cpp
 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.i: cmake_force
@@ -128,7 +170,7 @@ CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.s: 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_debug_messenger.cpp
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_debug_messenger.cpp
 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.i: cmake_force
@@ -142,7 +184,7 @@ CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.s: 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_device.cpp
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_device.cpp
 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.i: cmake_force
@@ -156,7 +198,7 @@ CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.s: cmake_for
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_framebuffers.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_framebuffers.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_framebuffers.cpp
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_framebuffers.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_framebuffers.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_framebuffers.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_framebuffers.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_framebuffers.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_framebuffers.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_framebuffers.cpp
 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_framebuffers.cpp.i: cmake_force
@@ -170,7 +212,7 @@ CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_framebuffers.cpp.s: cma
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_graphics_pipeline.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_graphics_pipeline.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_graphics_pipeline.cpp
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_graphics_pipeline.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_graphics_pipeline.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_graphics_pipeline.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_graphics_pipeline.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_graphics_pipeline.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_graphics_pipeline.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_graphics_pipeline.cpp
 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_graphics_pipeline.cpp.i: cmake_force
@@ -184,7 +226,7 @@ CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_graphics_pipeline.cpp.s
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_instance.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_instance.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_instance.cpp
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_instance.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_instance.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_instance.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_instance.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_instance.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_instance.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_instance.cpp
 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_instance.cpp.i: cmake_force
@@ -198,7 +240,7 @@ CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_instance.cpp.s: cmake_f
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_physical_device.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_physical_device.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_physical_device.cpp
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_physical_device.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_physical_device.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_physical_device.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_physical_device.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_physical_device.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_physical_device.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_physical_device.cpp
 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_physical_device.cpp.i: cmake_force
@@ -212,7 +254,7 @@ CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_physical_device.cpp.s: 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_shader_module.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_shader_module.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_shader_module.cpp
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_shader_module.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_shader_module.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_shader_module.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_shader_module.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_shader_module.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_shader_module.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_shader_module.cpp
 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_shader_module.cpp.i: cmake_force
@@ -226,7 +268,7 @@ CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_shader_module.cpp.s: cm
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_surface.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_surface.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_surface.cpp
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_surface.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_surface.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_surface.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_surface.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_surface.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_surface.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_surface.cpp
 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_surface.cpp.i: cmake_force
@@ -240,7 +282,7 @@ CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_surface.cpp.s: cmake_fo
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_swap_chain.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_swap_chain.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_swap_chain.cpp
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_swap_chain.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_swap_chain.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_swap_chain.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_swap_chain.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_swap_chain.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_swap_chain.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_swap_chain.cpp
 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_swap_chain.cpp.i: cmake_force
@@ -254,7 +296,7 @@ CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_swap_chain.cpp.s: cmake
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_sync_objects.cpp.o: CMakeFiles/VulkanPlayground.dir/flags.make
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_sync_objects.cpp.o: /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_sync_objects.cpp
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_sync_objects.cpp.o: CMakeFiles/VulkanPlayground.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_sync_objects.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_sync_objects.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_sync_objects.cpp.o -MF CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_sync_objects.cpp.o.d -o CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_sync_objects.cpp.o -c /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_sync_objects.cpp
 
 CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_sync_objects.cpp.i: cmake_force
@@ -269,7 +311,10 @@ CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_sync_objects.cpp.s: cma
 VulkanPlayground_OBJECTS = \
 "CMakeFiles/VulkanPlayground.dir/application/application.cpp.o" \
 "CMakeFiles/VulkanPlayground.dir/main.cpp.o" \
+"CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.o" \
+"CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.o" \
 "CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o" \
+"CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.o" \
 "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.o" \
 "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o" \
 "CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o" \
@@ -287,7 +332,10 @@ VulkanPlayground_EXTERNAL_OBJECTS =
 
 VulkanPlayground: CMakeFiles/VulkanPlayground.dir/application/application.cpp.o
 VulkanPlayground: CMakeFiles/VulkanPlayground.dir/main.cpp.o
+VulkanPlayground: CMakeFiles/VulkanPlayground.dir/engine/renderer/mesh.cpp.o
+VulkanPlayground: CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/manager/vulkan_buffer_manager.cpp.o
 VulkanPlayground: CMakeFiles/VulkanPlayground.dir/engine/window/window.cpp.o
+VulkanPlayground: CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_buffer.cpp.o
 VulkanPlayground: CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_command_buffers.cpp.o
 VulkanPlayground: CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o
 VulkanPlayground: CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o
@@ -303,7 +351,7 @@ VulkanPlayground: CMakeFiles/VulkanPlayground.dir/build.make
 VulkanPlayground: /usr/lib/x86_64-linux-gnu/libglfw.so.3.3
 VulkanPlayground: /usr/lib/x86_64-linux-gnu/libvulkan.so
 VulkanPlayground: CMakeFiles/VulkanPlayground.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable VulkanPlayground"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/clockhandle/Vulkan_Playground/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable VulkanPlayground"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VulkanPlayground.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

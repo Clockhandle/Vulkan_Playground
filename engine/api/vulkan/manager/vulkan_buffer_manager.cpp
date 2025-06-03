@@ -1,9 +1,11 @@
 #include "vulkan_buffer_manager.h"
 #include <stdexcept>
+#include <cstring>
 
-VulkanBufferManager::VulkanBufferManager(VkDevice device)
+VulkanBufferManager::VulkanBufferManager(VkDevice device, VkPhysicalDevice physicalDevice)
     :
-    m_device(device)
+    m_device(device),
+    m_physicalDevice(physicalDevice)
 {
     if (m_device == VK_NULL_HANDLE) 
     {
@@ -16,9 +18,16 @@ VulkanBufferManager::~VulkanBufferManager()
 {
 }
 
-std::unique_ptr<VulkanBuffer> VulkanBufferManager::createVertexBuffer(const void *vertedData, VkDeviceSize dataSize)
+std::unique_ptr<VulkanBuffer> VulkanBufferManager::createVertexBuffer(const void *vertexData, VkDeviceSize dataSize)
 {
-    auto vertexBuffer = std::make_unique<VulkanBuffer>(m_device, dataSize, VK_BUFFER_USAGE_VERTEX_BUFFER_BIT | VK_BUFFER_USAGE_TRANSFER_DST_BIT);
+    auto vertexBuffer = std::make_unique<VulkanBuffer>(m_device, m_physicalDevice, dataSize, VK_BUFFER_USAGE_VERTEX_BUFFER_BIT | VK_BUFFER_USAGE_TRANSFER_DST_BIT);
 
+    void* mappedData = nullptr;
+
+    VkResult mapResult = vkMapMemory(m_device, vertexBuffer->getMemoryHandle(), 0, dataSize, 0, &mappedData);
+
+    memcpy(mappedData, vertexData, dataSize);
+
+    vkUnmapMemory(m_device, vertexBuffer->getMemoryHandle());
     return vertexBuffer;
 }

@@ -203,8 +203,8 @@ CMakeFiles/VulkanPlayground.dir/application/application.cpp.o: \
  /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_physical_device.h \
  /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_swap_chain.h \
  /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_graphics_pipeline.h \
- /home/clockhandle/Vulkan_Playground/engine/renderer/vertex.h \
  /usr/include/c++/13/array /usr/include/c++/13/compare \
+ /home/clockhandle/Vulkan_Playground/engine/renderer/vertex.h \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
  /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
@@ -357,6 +357,13 @@ CMakeFiles/VulkanPlayground.dir/application/application.cpp.o: \
  /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_command_buffers.h \
  /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_framebuffers.h \
  /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_config.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/../../renderer/mesh.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/../../renderer/vertex.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/../../renderer/../api/vulkan/manager/vulkan_buffer_manager.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_buffer.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/../../renderer/../api/vulkan/vulkan_buffer.h \
  /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_sync_objects.h \
  /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_config.h \
- /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_shader_module.h
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_shader_module.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/manager/vulkan_buffer_manager.h \
+ /home/clockhandle/Vulkan_Playground/engine/renderer/mesh.h

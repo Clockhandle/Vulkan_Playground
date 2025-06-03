@@ -57,7 +57,7 @@ void Application::initVulkan()
     
     recreateSwapChain(); 
     
-    m_vulkanBufferManager = std::make_unique<VulkanBufferManager>(m_vulkanDevice->getHandle());
+    m_vulkanBufferManager = std::make_unique<VulkanBufferManager>(m_vulkanDevice->getHandle(), m_vulkanPhysicalDevice->getHandle());
     m_triangleMesh = std::make_unique<Mesh>(triangleVertices, *m_vulkanBufferManager);
     m_vulkanSyncObjects = std::make_unique<VulkanSyncObjects>(m_vulkanDevice->getHandle());
 }
@@ -203,7 +203,7 @@ void Application::drawFrame()
     vkResetFences(m_vulkanDevice->getHandle(), 1, &currentFrameFence);
 
     vkResetCommandBuffer(m_vulkanCommandBuffers->getHandle(m_currentFrame), 0); 
-    m_vulkanCommandBuffers->recordCommandBuffer(m_currentFrame, imageIndex);
+    m_vulkanCommandBuffers->recordCommandBuffer(m_currentFrame, imageIndex, m_triangleMesh.get());
 
     VkSubmitInfo submitInfo{};
     submitInfo.sType = VK_STRUCTURE_TYPE_SUBMIT_INFO;

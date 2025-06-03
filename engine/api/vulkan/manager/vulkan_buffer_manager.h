@@ -6,13 +6,14 @@
 
 class VulkanBufferManager {
 public:
-    VulkanBufferManager(VkDevice device);
+    VulkanBufferManager(VkDevice device, VkPhysicalDevice physicalDevice);
     ~VulkanBufferManager();
 
-    std::unique_ptr<VulkanBuffer> createVertexBuffer(const void* vertedData, VkDeviceSize dataSize);
+    std::unique_ptr<VulkanBuffer> createVertexBuffer(const void* vertexData, VkDeviceSize dataSize);
 
 private:
     VkDevice m_device;
+    VkPhysicalDevice m_physicalDevice;
 };
 
 #endif // VULKAN_BUFFER_MANAGER_H

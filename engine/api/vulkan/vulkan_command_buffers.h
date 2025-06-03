@@ -5,6 +5,8 @@
 #include "vulkan_physical_device.h"
 #include "vulkan_framebuffers.h"
 #include "vulkan_config.h"
+#include "../../renderer/mesh.h"
+
 class VulkanCommandBuffers {
 public:
     VulkanCommandBuffers(
@@ -18,7 +20,7 @@ public:
     
     VkCommandBuffer getHandle(uint32_t frameIndex) const;
     const VkCommandBuffer* getHandlePointer(uint32_t frameIndex) const;
-    void recordCommandBuffer(uint32_t frameIndex, uint32_t imageIndex);
+    void recordCommandBuffer(uint32_t frameIndex, uint32_t imageIndex, const Mesh* meshToDraw);
 private:
     void createCommandPool(const VulkanPhysicalDevice& physicalDevice);
     void createCommandBuffers();
