@@ -1,15 +1,5 @@
 #include "application.h"
-#include "window.h" 
-#include "../engine/API/Vulkan/vulkan_instance.h"
-#include "../engine/API/Vulkan/vulkan_debug_messenger.h"
-#include "../engine/API/Vulkan/vulkan_surface.h"
-#include "../engine/API/Vulkan/vulkan_physical_device.h"
-#include "../engine/API/Vulkan/vulkan_device.h"
-#include "../engine/API/Vulkan/vulkan_swap_chain.h"
-#include "../engine/API/Vulkan/vulkan_graphics_pipeline.h"
-#include "../engine/API/Vulkan/vulkan_framebuffers.h"
-#include "../engine/API/Vulkan/vulkan_command_buffers.h"
-#include "../engine/API/Vulkan/vulkan_sync_objects.h"
+
 
 #include <stdexcept> 
 #include <iostream>  

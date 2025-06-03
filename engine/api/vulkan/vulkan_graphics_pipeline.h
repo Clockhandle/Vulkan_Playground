@@ -5,9 +5,10 @@
 #include <string>
 #include <vector>
 #include <memory> // For std::unique_ptr if other members need it, not for shaders anymore
-
+#include "renderer/vertex.h"
 // Forward declare VulkanShaderModule if its full definition isn't needed here
 // Or include its header if getHandle() is used, but we'll pass VkShaderModule directly.
+using namespace VertexSpecification;
 
 class VulkanGraphicsPipeline {
 public:

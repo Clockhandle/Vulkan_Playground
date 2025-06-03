@@ -1,0 +1,120 @@
+/Vulkan_Playground/
+├── CMakeLists.txt
+├── main.cpp                     // Layer 0: Entry Point
+
+├── application/                 // Layer 1: Application Orchestration
+│   ├── application.h
+│   └── application.cpp
+
+├── assets/                      // Layer 2: Game-Specific Content (Data Files)
+│   ├── models/
+│   │   └── some_model.obj
+│   ├── shaders/                 // Shader source files
+│   │   ├── default.vert
+│   │   └── default.frag
+│   ├── textures/
+│   │   └── some_texture.png
+│   └── scenes/
+│       └── level1.json
+
+├── game/                        // Layer 2: Game-Specific Logic & Content (Code)
+│   ├── game_logic.h
+│   ├── game_logic.cpp
+│   ├── scene.h                  // Manages game objects in a scene
+│   ├── scene.cpp
+│   ├── entities/                // Or 'game_objects/'
+│   │   ├── player.h
+│   │   ├── player.cpp
+│   │   └── enemy.h
+│   │   └── enemy.cpp
+│   └── components/              // If using a component-based entity system
+│       ├── transform_component.h
+│       ├── render_component.h
+│       └── physics_component.h
+
+├── engine/                      // Layers 3 & 4: Engine
+│   ├── core/                    // General engine utilities, not specific to a system
+│   │   ├── non_copyable.h       // Utility for RAII classes
+│   │   ├── logger.h
+│   │   └── logger.cpp
+│   │   └── ...
+│   │
+│   ├── asset_manager/           // Layer 3: AssetManager System
+│   │   ├── asset_manager.h
+│   │   ├── asset_manager.cpp
+│   │   ├── asset_types.h        // Defines types like MeshData, TextureData
+│   │   └── loaders/             // Specific file format loaders
+│   │       ├── obj_loader.h
+│   │       ├── obj_loader.cpp
+│   │       └── texture_loader.h
+│   │       └── texture_loader.cpp
+│   │
+│   ├── input/                   // Layer 3: Input System
+│   │   ├── input_system.h
+│   │   └── input_system.cpp
+│   │
+│   ├── renderer/                // Layer 3: Renderer System
+│   │   ├── renderer.h
+│   │   ├── renderer.cpp
+│   │   ├── camera.h
+│   │   ├── camera.cpp
+│   │   ├── light.h
+│   │   ├── material.h           // Defines material properties
+│   │   ├── mesh.h               // Engine representation of a mesh (uses API buffers)
+│   │   ├── mesh.cpp
+│   │   ├── model.h              // Engine representation of a model (collection of meshes)
+│   │   ├── model.cpp
+│   │   ├── texture.h            // Engine representation of a texture (uses API images)
+│   │   ├── texture.cpp
+│   │   └── vertex.h             // Defines standard Vertex struct for the engine
+│   │
+│   ├── API/                // Layer 4: Platform & API Abstraction
+│   │   ├── filesystem/
+│   │   │   ├── filesystem.h
+│   │   │   └── filesystem.cpp
+│   │   ├── window/
+│   │   │   ├── window.h
+│   │   │   └── window.cpp
+│   │   └── vulkan/                // Graphics API Abstraction for Vulkan
+│   │       ├── vulkan_device.h
+│   │       ├── vulkan_device.cpp
+│   │       ├── vulkan_instance.h
+│   │       ├── vulkan_instance.cpp
+│   │       ├── vulkan_surface.h
+│   │       ├── vulkan_surface.cpp
+│   │       ├── vulkan_physical_device.h
+│   │       ├── vulkan_physical_device.cpp
+│   │       ├── vulkan_swap_chain.h
+│   │       ├── vulkan_swap_chain.cpp
+│   │       ├── vulkan_graphics_pipeline.h
+│   │       ├── vulkan_graphics_pipeline.cpp
+│   │       ├── vulkan_shader_module.h
+│   │       ├── vulkan_shader_module.cpp
+│   │       ├── vulkan_framebuffers.h
+│   │       ├── vulkan_framebuffers.cpp
+│   │       ├── vulkan_command_buffers.h
+│   │       ├── vulkan_command_buffers.cpp
+│   │       ├── vulkan_sync_objects.h
+│   │       ├── vulkan_sync_objects.cpp
+│   │       ├── vulkan_buffer.h         // Generic Vulkan buffer wrapper
+│   │       ├── vulkan_buffer.cpp
+│   │       ├── vulkan_image.h          // Generic Vulkan image wrapper
+│   │       ├── vulkan_image.cpp
+│   │       ├── vulkan_utils.h          // Helper functions, error checking
+│   │       ├── vulkan_utils.cpp
+│   │       ├── vulkan_swap_chain_system.h // Your new manager
+│   │       ├── vulkan_swap_chain_system.cpp
+│   │       ├── vulkan_buffer_manager.h    // Your new manager
+│   │       └── vulkan_buffer_manager.cpp
+│   │   // If you supported another API:
+│   │   // └── directx/
+│   │   //     ├── dx_device.h
+│   │   //     └── ...
+│
+├── libs/                        // Layer 5: Third-Party Libraries (source or headers if not system-installed)
+│   ├── glm/
+│   └── stb/
+│       └── stb_image.h
+│
+└── README.md
+└── .gitignore

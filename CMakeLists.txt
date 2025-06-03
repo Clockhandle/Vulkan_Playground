@@ -6,14 +6,11 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # --- Include Directories ---
-# Add directories containing header files
-# This allows you to use #include "header.h" if the header is in these dirs,
-# or #include "subdir/header.h" if it's in a subdirectory of these.
 include_directories(
-    ${CMAKE_CURRENT_SOURCE_DIR} # Allows #include "application/application.h", etc.
+    ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/application
     ${CMAKE_CURRENT_SOURCE_DIR}/engine
-    ${CMAKE_CURRENT_SOURCE_DIR}/engine/API/Vulkan
+    ${CMAKE_CURRENT_SOURCE_DIR}/engine/api/vulkan
     ${CMAKE_CURRENT_SOURCE_DIR}/engine/window
 )
 
@@ -54,13 +51,9 @@ add_custom_target(CompileShaders ALL
     DEPENDS ${VERT_SHADER_SPV} ${FRAG_SHADER_SPV}
 )
 
-# --- Source Files ---
-# Gather source files from their new locations
-# Assuming main() is in application.cpp or you have a main.cpp at the root.
-# If main.cpp is at the root, add it like: ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+
 set(PROJECT_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/application/application.cpp
-    # Add main.cpp here if it's separate and at the root:
     ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
 )
 
@@ -82,5 +75,3 @@ target_compile_definitions(${PROJECT_NAME} PRIVATE
     $<$<CONFIG:DEBUG>:DEBUG>
     $<$<CONFIG:RELEASE>:NDEBUG>
 )
-
-# Removed custom 'run' and 'clean_build' targets as Makefile handles this.
