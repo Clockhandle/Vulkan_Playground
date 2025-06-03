@@ -1,7 +1,7 @@
-CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_instance.cpp.o: \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_instance.cpp \
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_instance.cpp.o: \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_instance.cpp \
  /usr/include/stdc-predef.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_instance.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_instance.h \
  /usr/include/GLFW/glfw3.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
@@ -146,7 +146,7 @@ CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_instance.cpp.o: \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/cstring \
  /usr/include/string.h /usr/include/strings.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_debug_messenger.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_debug_messenger.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
  /usr/include/c++/13/ios /usr/include/c++/13/bits/ios_base.h \
  /usr/include/c++/13/ext/atomicity.h \

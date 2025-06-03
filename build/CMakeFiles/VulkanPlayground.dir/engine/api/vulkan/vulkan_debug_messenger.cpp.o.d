@@ -1,7 +1,7 @@
-CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_debug_messenger.cpp.o: \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_debug_messenger.cpp \
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_debug_messenger.cpp.o: \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_debug_messenger.cpp \
  /usr/include/stdc-predef.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_debug_messenger.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_debug_messenger.h \
  /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \

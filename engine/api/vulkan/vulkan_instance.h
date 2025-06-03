@@ -13,6 +13,14 @@ public:
     VulkanInstance(bool enableValidationLayers);
     ~VulkanInstance();
 
+    //Delete copy constructor and copy assignment operator
+    VulkanInstance(const VulkanInstance&) = delete;
+    VulkanInstance& operator=(const VulkanInstance&) = delete;
+
+    //Move semantics
+    VulkanInstance(VulkanInstance&& other) noexcept;
+    VulkanInstance& operator=(VulkanInstance&& other) noexcept;
+    
     VkInstance getHandle() const;
 private:
     void createInstance();

@@ -189,19 +189,19 @@ CMakeFiles/VulkanPlayground.dir/main.cpp.o: \
  /home/clockhandle/Vulkan_Playground/engine/window/window.h \
  /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_instance.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_instance.h \
  /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_debug_messenger.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_surface.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_physical_device.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_debug_messenger.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_surface.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_physical_device.h \
  /usr/include/c++/13/optional \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/cstdint \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_surface.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_device.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_physical_device.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_swap_chain.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_graphics_pipeline.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_surface.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_device.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_physical_device.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_swap_chain.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_graphics_pipeline.h \
  /home/clockhandle/Vulkan_Playground/engine/renderer/vertex.h \
  /usr/include/c++/13/array /usr/include/c++/13/compare \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
@@ -351,11 +351,11 @@ CMakeFiles/VulkanPlayground.dir/main.cpp.o: \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
  /usr/include/glm/detail/func_integer.inl \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_framebuffers.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_swap_chain.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_command_buffers.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_framebuffers.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_config.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_sync_objects.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_config.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_shader_module.h
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_framebuffers.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_swap_chain.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_command_buffers.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_framebuffers.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_config.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_sync_objects.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_config.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_shader_module.h

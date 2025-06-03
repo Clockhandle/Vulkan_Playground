@@ -57,6 +57,8 @@ void Application::initVulkan()
     
     recreateSwapChain(); 
     
+    m_vulkanBufferManager = std::make_unique<VulkanBufferManager>(m_vulkanDevice->getHandle());
+    m_triangleMesh = std::make_unique<Mesh>(triangleVertices, *m_vulkanBufferManager);
     m_vulkanSyncObjects = std::make_unique<VulkanSyncObjects>(m_vulkanDevice->getHandle());
 }
 
@@ -157,11 +159,12 @@ void Application::cleanup()
     cleanupSwapChain(); 
     m_vulkanSwapChain.reset();
 
-    m_retiredSwapChains.clear();
-    
     m_globalFragShaderModule.reset();
     m_globalVertShaderModule.reset();
-
+    
+    m_vulkanBufferManager.reset();
+    m_triangleMesh.reset();
+    m_retiredSwapChains.clear();
     m_vulkanDevice.reset();
     m_vulkanSurface.reset();
     m_vulkanDebugMessenger.reset();

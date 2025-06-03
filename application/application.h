@@ -19,6 +19,8 @@
 #include "vulkan_sync_objects.h"
 #include "vulkan_config.h" 
 #include "vulkan_shader_module.h"
+#include "vulkan_buffer_manager.h"
+#include "mesh.h"
 
 class Application {
 public:
@@ -45,15 +47,25 @@ private:
     std::unique_ptr<VulkanGraphicsPipeline> m_vulkanGraphicsPipeline;
     std::unique_ptr<VulkanFramebuffer> m_vulkanFramebuffer;
     std::unique_ptr<VulkanCommandBuffers> m_vulkanCommandBuffers;
+    std::unique_ptr<VulkanBufferManager> m_vulkanBufferManager;
     std::unique_ptr<VulkanSyncObjects> m_vulkanSyncObjects;
 
     std::unique_ptr<VulkanShaderModule> m_globalVertShaderModule;
     std::unique_ptr<VulkanShaderModule> m_globalFragShaderModule;
+    
+    std::unique_ptr<Mesh> m_triangleMesh;
 
     std::vector<std::unique_ptr<VulkanSwapChain>> m_retiredSwapChains;
     
     bool m_enableValidationLayers;
     size_t m_currentFrame = 0;
+
+    const std::vector<Vertex> triangleVertices = {
+        {{0.0f, -0.5f}, {1.0f, 0.0f, 0.0f}},
+        {{0.5f, 0.5f}, {0.0f, 1.0f, 0.0f}},
+        {{-0.5f, 0.5f}, {0.0f, 0.0f, 1.0f}}
+    };
+
 };
 
 #endif // APPLICATION_H

@@ -22,6 +22,31 @@ VulkanInstance::~VulkanInstance()
     }
 }
 
+VulkanInstance::VulkanInstance(VulkanInstance &&other) noexcept
+    :
+    m_instance(other.m_instance),
+    m_enableValidationLayers(other.m_enableValidationLayers)
+{
+    other.m_instance = VK_NULL_HANDLE;
+}
+
+VulkanInstance &VulkanInstance::operator=(VulkanInstance &&other) noexcept
+{
+    if (this != &other)
+    {
+        if(m_instance != VK_NULL_HANDLE)
+        {
+            vkDestroyInstance(m_instance, nullptr);
+        }
+
+        m_instance = other.m_instance;
+        m_enableValidationLayers = other.m_enableValidationLayers;
+
+        other.m_instance = VK_NULL_HANDLE;
+    }
+    return *this;
+}
+
 VkInstance VulkanInstance::getHandle() const
 {
     return m_instance;

@@ -3,7 +3,9 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/engine/api/vulkan",
+                "${workspaceFolder}/engine"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",

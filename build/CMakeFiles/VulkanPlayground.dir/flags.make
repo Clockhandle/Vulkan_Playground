@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DDEBUG
 
-CXX_INCLUDES = -I/home/clockhandle/Vulkan_Playground -I/home/clockhandle/Vulkan_Playground/application -I/home/clockhandle/Vulkan_Playground/engine -I/home/clockhandle/Vulkan_Playground/engine/API/Vulkan -I/home/clockhandle/Vulkan_Playground/engine/window
+CXX_INCLUDES = -I/home/clockhandle/Vulkan_Playground -I/home/clockhandle/Vulkan_Playground/application -I/home/clockhandle/Vulkan_Playground/engine -I/home/clockhandle/Vulkan_Playground/engine/api/vulkan -I/home/clockhandle/Vulkan_Playground/engine/window
 
 CXX_FLAGS = -g -std=gnu++17
 

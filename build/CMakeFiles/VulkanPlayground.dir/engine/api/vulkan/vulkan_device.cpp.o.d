@@ -1,7 +1,7 @@
-CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_command_buffers.cpp.o: \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_command_buffers.cpp \
+CMakeFiles/VulkanPlayground.dir/engine/api/vulkan/vulkan_device.cpp.o: \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_device.cpp \
  /usr/include/stdc-predef.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_command_buffers.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_device.h \
  /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
@@ -34,7 +34,7 @@ CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_command_buffers.cpp.o: 
  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
  /usr/include/vk_video/vulkan_video_codec_av1std.h \
  /usr/include/vk_video/vulkan_video_codec_av1std_encode.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_physical_device.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_physical_device.h \
  /usr/include/c++/13/stdexcept /usr/include/c++/13/exception \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -178,9 +178,13 @@ CMakeFiles/VulkanPlayground.dir/engine/API/Vulkan/vulkan_command_buffers.cpp.o: 
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_surface.h \
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_surface.h \
  /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
  /usr/include/KHR/khrplatform.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_framebuffers.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_swap_chain.h \
- /home/clockhandle/Vulkan_Playground/engine/API/Vulkan/vulkan_config.h
+ /home/clockhandle/Vulkan_Playground/engine/api/vulkan/vulkan_config.h \
+ /usr/include/c++/13/set /usr/include/c++/13/bits/stl_tree.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/stl_set.h \
+ /usr/include/c++/13/bits/stl_multiset.h \
+ /usr/include/c++/13/bits/erase_if.h
